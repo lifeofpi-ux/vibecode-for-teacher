@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', sans-serif;
-  background: linear-gradient(160deg, #fffbeb 0%, #fef9f3 50%, #f0f9ff 100%);
+  background: #fdf7e9;
   min-height: 100vh;
-  color: #374151;
+  color: #3d3a34;
 }

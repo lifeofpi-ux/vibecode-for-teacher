@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!--
-  우리 반 실시간 칭찬 보드 — 체험판 데모 (Demo Mode)
-  Supabase 없이 브라우저 메모리에서 동작하는 맛보기 버전입니다.
-  · 데이터는 저장되지 않으며 새로고침하면 초기화됩니다.
+  우리 반 칭찬 보드 — 체험판 데모 (Demo Mode)
+  책 Part 4에서 완성·배포하는 산출물과 같은 모습으로 동작하는 맛보기 버전입니다.
+  · Supabase 없이 브라우저 메모리에서만 동작하며, 새로고침하면 초기화됩니다.
   · 같은 브라우저에서 창(탭)을 2개 열면 BroadcastChannel로
     실시간 동기화를 흉내 내어 책 속 "실시간 반영"을 체험할 수 있습니다.
   실제 완성본(React + Vite + Supabase Realtime) 소스코드는 저장소의
@@ -12,144 +12,180 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>우리 반 실시간 칭찬 보드 — 체험판</title>
+  <title>우리 반 칭찬 보드</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', sans-serif;
-      background: linear-gradient(160deg, #fffbeb 0%, #fef9f3 50%, #f0f9ff 100%);
+      background: #fdf7e9;
       min-height: 100vh;
-      color: #374151;
+      color: #3d3a34;
     }
 
-    .app { max-width: 960px; margin: 0 auto; padding: 28px 20px 60px; }
-
-    /* ── 체험판 안내 배너 ─────────────── */
-    .demo-banner {
-      background: #eff6ff;
-      border: 1.5px dashed #93c5fd;
-      border-radius: 16px;
-      padding: 14px 18px;
-      font-size: 13.5px;
-      line-height: 1.7;
-      color: #1e40af;
-      margin-bottom: 28px;
-      word-break: keep-all;
-    }
-
-    .demo-banner strong { color: #1d4ed8; }
-    .demo-banner a { color: #1d4ed8; font-weight: 700; }
-
-    /* ── 헤더 ─────────────────────────── */
-    .header { text-align: center; margin-bottom: 28px; }
-    .header h1 { font-size: 30px; color: #b45309; margin-bottom: 8px; }
-    .header p { color: #92400e; font-size: 15px; }
-
-    /* ── 입력 폼 ───────────────────────── */
-    .praise-form {
-      background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(180, 83, 9, 0.1);
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 36px;
-    }
-
-    .praise-form input,
-    .praise-form textarea {
-      border: 2px solid #fde68a;
-      border-radius: 12px;
-      padding: 12px 14px;
-      font-size: 15px;
-      font-family: inherit;
-      resize: none;
-      transition: border-color 0.2s;
-    }
-
-    .praise-form input:focus,
-    .praise-form textarea:focus { outline: none; border-color: #f59e0b; }
-
-    .praise-form button {
-      align-self: flex-end;
-      background: linear-gradient(135deg, #fbbf24, #f59e0b);
-      color: #ffffff;
-      border: none;
-      border-radius: 999px;
-      padding: 12px 28px;
-      font-size: 15px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform 0.15s, box-shadow 0.15s;
-      box-shadow: 0 6px 16px rgba(245, 158, 11, 0.35);
-    }
-
-    .praise-form button:hover:not(:disabled) {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(245, 158, 11, 0.4);
-    }
-
-    .praise-form button:disabled { opacity: 0.5; cursor: not-allowed; }
-
-    /* ── 칭찬 카드 보드 ─────────────────── */
-    .board {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 18px;
-    }
-
-    .empty {
-      grid-column: 1 / -1;
-      text-align: center;
-      color: #9ca3af;
-      padding: 50px 0;
-      font-size: 16px;
-    }
-
-    .card {
-      border-radius: 16px;
-      padding: 20px 18px 14px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      animation: pop-in 0.35s ease;
-      word-break: keep-all;
-    }
-
-    .color-0 { background: #fef9c3; }
-    .color-1 { background: #dcfce7; }
-    .color-2 { background: #e0f2fe; }
-    .color-3 { background: #fce7f3; }
-
-    .card-name { font-weight: 800; font-size: 16px; color: #1f2937; }
-    .card-message { font-size: 14.5px; line-height: 1.6; color: #374151; flex: 1; }
-    .card-time { font-size: 12px; color: #9ca3af; text-align: right; }
-
-    @keyframes pop-in {
-      from { opacity: 0; transform: translateY(12px) scale(0.96); }
-      to   { opacity: 1; transform: translateY(0) scale(1); }
-    }
+    .page { max-width: 760px; margin: 0 auto; padding: 26px 20px 70px; }
 
     .back-link {
       display: inline-block;
       margin-bottom: 14px;
       font-size: 13px;
       font-weight: 700;
-      color: #1d4ed8;
+      color: #2f7fd3;
       text-decoration: none;
     }
 
+    /* ── 체험판 안내 배너 ─────────────── */
+    .demo-banner {
+      background: #eff6ff;
+      border: 1.5px dashed #93c5fd;
+      border-radius: 14px;
+      padding: 13px 17px;
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: #1e40af;
+      margin-bottom: 34px;
+      word-break: keep-all;
+    }
+    .demo-banner strong { color: #1d4ed8; }
+    .demo-banner a { color: #1d4ed8; font-weight: 700; }
+
+    /* ── 헤더 ─────────────────────────── */
+    .hero { text-align: center; margin-bottom: 34px; }
+
+    .title {
+      font-size: 34px;
+      font-weight: 800;
+      color: #f06e9c;
+      margin-bottom: 12px;
+      word-break: keep-all;
+    }
+
+    .subtitle { font-size: 15.5px; color: #6f6a60; }
+
+    /* ── 입력 폼 카드 ───────────────────── */
+    .card.form {
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(120, 100, 40, 0.08);
+      padding: 30px 32px;
+      margin-bottom: 44px;
+    }
+
+    .label {
+      display: block;
+      font-size: 15px;
+      font-weight: 800;
+      color: #3d3a34;
+      margin-bottom: 10px;
+    }
+
+    .input, .textarea {
+      width: 100%;
+      border: 1.5px solid #e5e0d5;
+      border-radius: 10px;
+      padding: 13px 15px;
+      font-size: 15px;
+      font-family: inherit;
+      color: #3d3a34;
+      background: #ffffff;
+      margin-bottom: 22px;
+      transition: border-color 0.2s;
+    }
+
+    .textarea { resize: vertical; min-height: 96px; }
+
+    .input:focus, .textarea:focus { outline: none; border-color: #f7c948; }
+    .input::placeholder, .textarea::placeholder { color: #b0aa9d; }
+
+    .submit {
+      width: 100%;
+      background: #ffd514;
+      border: none;
+      border-radius: 12px;
+      padding: 16px;
+      font-size: 16.5px;
+      font-weight: 800;
+      font-family: inherit;
+      color: #4a4335;
+      cursor: pointer;
+      transition: transform 0.15s, filter 0.15s;
+    }
+
+    .submit:hover:not(:disabled) { transform: translateY(-1px); filter: brightness(1.03); }
+    .submit:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    /* ── 칭찬 목록 ─────────────────────── */
+    .list-title {
+      font-size: 21px;
+      font-weight: 800;
+      color: #3d3a34;
+      margin-bottom: 20px;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 22px;
+    }
+
+    .empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      color: #a89f8f;
+      padding: 40px 0;
+      font-size: 15.5px;
+    }
+
+    .praise-card {
+      background: #ffffff;
+      border-radius: 14px;
+      border-top: 5px solid #f9a8c9;
+      box-shadow: 0 6px 18px rgba(120, 100, 40, 0.08);
+      padding: 20px 22px 14px;
+      animation: pop-in 0.35s ease;
+      word-break: keep-all;
+    }
+
+    .praise-to {
+      font-size: 16px;
+      font-weight: 800;
+      color: #ee6b9e;
+      margin-bottom: 12px;
+    }
+
+    .praise-message {
+      font-size: 15px;
+      line-height: 1.65;
+      color: #3d3a34;
+      margin-bottom: 14px;
+    }
+
+    .praise-card hr {
+      border: none;
+      border-top: 1px solid #f0ece2;
+      margin-bottom: 10px;
+    }
+
+    .praise-time {
+      display: block;
+      font-size: 12.5px;
+      color: #a89f8f;
+      text-align: right;
+    }
+
+    @keyframes pop-in {
+      from { opacity: 0; transform: translateY(12px) scale(0.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
     @media (max-width: 480px) {
-      .header h1 { font-size: 24px; }
-      .praise-form button { align-self: stretch; }
+      .title { font-size: 27px; }
+      .card.form { padding: 24px 20px; }
     }
   </style>
 </head>
 <body>
-  <div class="app">
+  <div class="page">
     <a class="back-link" href="../">← 산출물 갤러리</a>
 
     <div class="demo-banner">
@@ -160,18 +196,22 @@
       <a href="https://github.com/lifeofpi-ux/vibecode-for-teacher/tree/main/Part4-%EB%A1%9C%EC%BB%AC%EA%B0%9C%EB%B0%9C/Ch04-MCP-%EC%8B%A4%EC%8B%9C%EA%B0%84-%ED%98%91%EC%97%85%EB%B3%B4%EB%93%9C/%EC%99%84%EC%84%B1%EB%B3%B8" target="_blank" rel="noopener">저장소</a>에 있습니다.
     </div>
 
-    <header class="header">
-      <h1>🌟 우리 반 실시간 칭찬 보드</h1>
-      <p>친구의 좋은 점을 발견하면 바로 칭찬해 주세요!</p>
+    <header class="hero">
+      <h1 class="title">🌟 우리 반 칭찬 보드 🌟</h1>
+      <p class="subtitle">친구에게 따뜻한 마음을 전해보세요!</p>
     </header>
 
-    <form class="praise-form" id="praiseForm">
-      <input type="text" id="studentName" placeholder="학생 이름" maxlength="20" />
-      <textarea id="message" rows="2" maxlength="200"
-        placeholder="칭찬 메시지를 적어주세요 (예: 수학 문제를 끝까지 포기하지 않았어요!)"></textarea>
-      <button type="submit" id="submitBtn" disabled>💌 칭찬 남기기</button>
+    <form class="card form" id="praiseForm">
+      <label class="label" for="to">받는 사람</label>
+      <input class="input" id="to" type="text" placeholder="친구 이름" maxlength="20" />
+
+      <label class="label" for="message">칭찬 내용</label>
+      <textarea class="textarea" id="message" placeholder="칭찬 메시지를 적어주세요!" maxlength="200"></textarea>
+
+      <button class="submit" id="submitBtn" type="submit" disabled>칭찬 남기기 ✨</button>
     </form>
 
+    <h2 class="list-title">따뜻한 마음들 💌 (<span id="count">0</span>)</h2>
     <main class="board" id="board"></main>
   </div>
 
@@ -179,9 +219,8 @@
     // ── 체험판 데이터: 브라우저 메모리에만 존재 (새로고침 시 초기화) ──
     const seedTime = Date.now();
     let praises = [
-      { id: 's1', student_name: '강혜심', message: '수학 문제를 끝까지 포기하지 않았어요!', created_at: new Date(seedTime - 1000 * 60 * 14).toISOString() },
-      { id: 's2', student_name: '이도윤', message: '넘어진 친구를 제일 먼저 달려가 도와줬어요. 마음이 참 따뜻해요.', created_at: new Date(seedTime - 1000 * 60 * 9).toISOString() },
-      { id: 's3', student_name: '박서연', message: '급식실에서 조용히 줄 서는 모습이 멋졌어요!', created_at: new Date(seedTime - 1000 * 60 * 3).toISOString() },
+      { id: 's1', student_name: '김진주', message: '다른 친구들을 도와주었어요!', created_at: new Date(seedTime - 1000 * 60 * 12).toISOString() },
+      { id: 's2', student_name: '강혜심', message: '수학 문제를 끝까지 포기하지 않았어요!', created_at: new Date(seedTime - 1000 * 60 * 4).toISOString() },
     ];
 
     // ── 실시간 흉내: 같은 브라우저의 다른 창(탭)과 동기화 ──
@@ -198,64 +237,71 @@
     }
 
     const board = document.getElementById('board');
+    const countEl = document.getElementById('count');
     const form = document.getElementById('praiseForm');
-    const nameInput = document.getElementById('studentName');
+    const toInput = document.getElementById('to');
     const msgInput = document.getElementById('message');
     const submitBtn = document.getElementById('submitBtn');
 
     function formatTime(iso) {
       const d = new Date(iso);
-      return `${d.getMonth() + 1}월 ${d.getDate()}일 ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+      let h = d.getHours();
+      const ampm = h < 12 ? '오전' : '오후';
+      h = h % 12 || 12;
+      return `${d.getMonth() + 1}월 ${d.getDate()}일 ${ampm} ${h}:${String(d.getMinutes()).padStart(2, '0')}`;
     }
 
     function render() {
+      countEl.textContent = praises.length;
       if (praises.length === 0) {
         board.innerHTML = '<p class="empty">아직 칭찬이 없어요. 첫 번째 칭찬을 남겨보세요! ✨</p>';
         return;
       }
       board.innerHTML = '';
-      praises.forEach((praise, index) => {
+      praises.forEach((praise) => {
         const card = document.createElement('article');
-        card.className = `card color-${index % 4}`;
+        card.className = 'praise-card';
 
-        const name = document.createElement('div');
-        name.className = 'card-name';
-        name.textContent = `🏅 ${praise.student_name}`;
+        const to = document.createElement('div');
+        to.className = 'praise-to';
+        to.textContent = `To. ${praise.student_name}`;
 
         const msg = document.createElement('p');
-        msg.className = 'card-message';
+        msg.className = 'praise-message';
         msg.textContent = praise.message;
 
+        const hr = document.createElement('hr');
+
         const time = document.createElement('time');
-        time.className = 'card-time';
+        time.className = 'praise-time';
         time.textContent = formatTime(praise.created_at);
 
-        card.append(name, msg, time);
+        card.append(to, msg, hr, time);
         board.appendChild(card);
       });
     }
 
     function updateButton() {
-      submitBtn.disabled = !nameInput.value.trim() || !msgInput.value.trim();
+      submitBtn.disabled = !toInput.value.trim() || !msgInput.value.trim();
     }
-    nameInput.addEventListener('input', updateButton);
+    toInput.addEventListener('input', updateButton);
     msgInput.addEventListener('input', updateButton);
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const praise = {
         id: 'p' + Date.now() + Math.random().toString(36).slice(2, 7),
-        student_name: nameInput.value.trim(),
+        student_name: toInput.value.trim(),
         message: msgInput.value.trim(),
         created_at: new Date().toISOString(),
       };
       praises = [praise, ...praises];
       render();
       if (channel) channel.postMessage(praise); // 다른 창에도 실시간 전달
-      nameInput.value = '';
+      toInput.value = '';
       msgInput.value = '';
       updateButton();
-      nameInput.focus();
+      toInput.focus();
     });
 
     render();

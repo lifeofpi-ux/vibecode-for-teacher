@@ -4,7 +4,7 @@ import './App.css'
 
 function App() {
   const [praises, setPraises] = useState([])
-  const [studentName, setStudentName] = useState('')
+  const [to, setTo] = useState('')
   const [message, setMessage] = useState('')
   const [loading, setLoading] = useState(false)
 
@@ -52,65 +52,83 @@ function App() {
   // 3) 칭찬 추가하기
   const handleSubmit = async (e) => {
     e.preventDefault()
-    if (!studentName.trim() || !message.trim()) return
+    if (!to.trim() || !message.trim()) return
 
     setLoading(true)
     const { error } = await supabase
       .from('praises')
-      .insert([{ student_name: studentName.trim(), message: message.trim() }])
+      .insert([{ student_name: to.trim(), message: message.trim() }])
 
     if (error) {
       alert('칭찬을 저장하지 못했어요: ' + error.message)
     } else {
-      setStudentName('')
+      setTo('')
       setMessage('')
     }
     setLoading(false)
   }
 
+  // "3월 11일 오후 11:10" 형태로 표시
   const formatTime = (iso) => {
     const d = new Date(iso)
-    return `${d.getMonth() + 1}월 ${d.getDate()}일 ${String(
-      d.getHours()
-    ).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`
+    let h = d.getHours()
+    const ampm = h < 12 ? '오전' : '오후'
+    h = h % 12 || 12
+    return `${d.getMonth() + 1}월 ${d.getDate()}일 ${ampm} ${h}:${String(
+      d.getMinutes()
+    ).padStart(2, '0')}`
   }
 
   return (
-    <div className="app">
-      <header className="header">
-        <h1>🌟 우리 반 실시간 칭찬 보드</h1>
-        <p>친구의 좋은 점을 발견하면 바로 칭찬해 주세요!</p>
+    <div className="page">
+      <header className="hero">
+        <h1 className="title">🌟 우리 반 칭찬 보드 🌟</h1>
+        <p className="subtitle">친구에게 따뜻한 마음을 전해보세요!</p>
       </header>
 
-      <form className="praise-form" onSubmit={handleSubmit}>
+      <form className="card form" onSubmit={handleSubmit}>
+        <label className="label" htmlFor="to">받는 사람</label>
         <input
+          id="to"
+          className="input"
           type="text"
-          placeholder="학생 이름"
-          value={studentName}
-          onChange={(e) => setStudentName(e.target.value)}
+          placeholder="친구 이름"
+          value={to}
+          onChange={(e) => setTo(e.target.value)}
           maxLength={20}
         />
+
+        <label className="label" htmlFor="message">칭찬 내용</label>
         <textarea
-          placeholder="칭찬 메시지를 적어주세요 (예: 수학 문제를 끝까지 포기하지 않았어요!)"
+          id="message"
+          className="textarea"
+          placeholder="칭찬 메시지를 적어주세요!"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          rows={2}
           maxLength={200}
         />
-        <button type="submit" disabled={loading || !studentName.trim() || !message.trim()}>
-          {loading ? '저장 중...' : '💌 칭찬 남기기'}
+
+        <button
+          className="submit"
+          type="submit"
+          disabled={loading || !to.trim() || !message.trim()}
+        >
+          {loading ? '저장 중...' : '칭찬 남기기 ✨'}
         </button>
       </form>
+
+      <h2 className="list-title">따뜻한 마음들 💌 ({praises.length})</h2>
 
       <main className="board">
         {praises.length === 0 ? (
           <p className="empty">아직 칭찬이 없어요. 첫 번째 칭찬을 남겨보세요! ✨</p>
         ) : (
-          praises.map((praise, index) => (
-            <article key={praise.id} className={`card color-${index % 4}`}>
-              <div className="card-name">🏅 {praise.student_name}</div>
-              <p className="card-message">{praise.message}</p>
-              <time className="card-time">{formatTime(praise.created_at)}</time>
+          praises.map((praise) => (
+            <article key={praise.id} className="praise-card">
+              <div className="praise-to">To. {praise.student_name}</div>
+              <p className="praise-message">{praise.message}</p>
+              <hr />
+              <time className="praise-time">{formatTime(praise.created_at)}</time>
             </article>
           ))
         )}
