@@ -1,5 +1,8 @@
 # Ch 4. [실전 프로젝트] MCP로 Supabase 실시간 협업 보드 만들기
 
+> 🖥 **완성 모습이 궁금하다면?** → [체험판 데모 보기](https://lifeofpi-ux.github.io/vibecode-for-teacher/praise-board/) · [완성본 소스코드](완성본/)
+> (체험판은 Supabase 없이 동작합니다. 창을 2개 열면 실시간 반영을 체험할 수 있어요!)
+
 Antigravity에서 MCP(Supabase 연결)를 설정한 뒤, 아래 프롬프트를 순서대로 사용합니다.
 
 ## 1. PRD 작성 프롬프트 (에이전트 패널, Ctrl+L)

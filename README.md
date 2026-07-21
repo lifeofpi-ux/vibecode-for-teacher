@@ -34,6 +34,20 @@
 | [Ch 1. Antigravity 시작하기](Part4-로컬개발/Ch01-Antigravity-프로필-페이지/) | Antigravity | 첫 HTML 프로필 페이지 프롬프트 |
 | [Ch 4. [실전 프로젝트] MCP로 Supabase 실시간 협업 보드 만들기](Part4-로컬개발/Ch04-MCP-실시간-협업보드/) | Antigravity + MCP | PRD 작성 · 테이블 생성 · 앱 구현 3단계 |
 
+## 🖥 Part 4 산출물 웹앱 — 데모 & 완성본
+
+Part 4 실습에서 만드는 웹앱들의 **완성 모습을 설치 없이 바로 체험**할 수 있습니다.
+
+> ### 👉 [Part 4 산출물 갤러리 바로가기](https://lifeofpi-ux.github.io/vibecode-for-teacher/)
+
+| 산출물 | 라이브 데모 | 완성본 소스코드 |
+|---|---|---|
+| 🧑‍🏫 나만의 HTML 프로필 페이지 (Ch 1) | [데모 보기](https://lifeofpi-ux.github.io/vibecode-for-teacher/profile/) | [완성본 폴더](Part4-로컬개발/Ch01-Antigravity-프로필-페이지/완성본/) |
+| 🌟 우리 반 실시간 칭찬 보드 (Ch 4) | [체험판 데모](https://lifeofpi-ux.github.io/vibecode-for-teacher/praise-board/) | [완성본 폴더](Part4-로컬개발/Ch04-MCP-실시간-협업보드/완성본/) |
+
+- 칭찬 보드 데모는 Supabase 없이 동작하는 **체험판**입니다. 창을 2개 열면 실시간 반영도 체험할 수 있어요. (새로고침 시 초기화)
+- 완성본 소스코드는 책을 따라 만든 결과물과 비교하거나 막혔을 때 참고용으로 활용하세요. 실행 방법은 각 폴더의 README에 있습니다.
+
 ---
 
 ### 사용 시 유의사항

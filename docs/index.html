@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Part 4 산출물 갤러리 — 요즘 교사를 위한 바이브 코딩</title>
+  <meta name="description" content="책 '요즘 교사를 위한 바이브 코딩 + 웹앱 개발' Part 4 로컬 개발 실습의 산출물 웹앱을 직접 체험해 보세요." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', sans-serif;
+      background: linear-gradient(160deg, #fffbeb 0%, #fef9f3 45%, #eff6ff 100%);
+      min-height: 100vh;
+      color: #374151;
+    }
+
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 56px 20px 64px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #fde68a;
+      color: #92400e;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(26px, 4.5vw, 36px);
+      color: #1f2937;
+      line-height: 1.35;
+      margin-bottom: 12px;
+      word-break: keep-all;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #6b7280;
+      line-height: 1.7;
+      margin-bottom: 40px;
+      word-break: keep-all;
+    }
+
+    .subtitle a { color: #2563eb; font-weight: 700; text-decoration: none; }
+    .subtitle a:hover { text-decoration: underline; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 22px;
+      box-shadow: 0 14px 36px rgba(31, 41, 55, 0.1);
+      padding: 30px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 44px rgba(31, 41, 55, 0.14);
+    }
+
+    .card .icon { font-size: 40px; }
+
+    .card h2 { font-size: 20px; color: #1f2937; word-break: keep-all; }
+
+    .card .chapter {
+      font-size: 13px;
+      font-weight: 700;
+      color: #b45309;
+    }
+
+    .card p {
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: #6b7280;
+      flex: 1;
+      word-break: keep-all;
+    }
+
+    .card .links { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 999px;
+      transition: transform 0.15s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      color: #ffffff;
+      box-shadow: 0 6px 14px rgba(245, 158, 11, 0.35);
+    }
+
+    .btn-secondary {
+      background: #f3f4f6;
+      color: #374151;
+      border: 1px solid #e5e7eb;
+    }
+
+    footer {
+      margin-top: 52px;
+      text-align: center;
+      font-size: 13px;
+      color: #9ca3af;
+      line-height: 1.8;
+      word-break: keep-all;
+    }
+
+    footer a { color: #6b7280; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <span class="badge">Part 4. 로컬환경에서 진짜 개발자처럼 일하기</span>
+    <h1>📦 Part 4 산출물 갤러리</h1>
+    <p class="subtitle">
+      책 <strong>《요즘 교사를 위한 바이브 코딩 + 웹앱 개발》</strong> Part 4 실습에서 만드는
+      웹앱들의 완성 모습을 설치 없이 바로 체험해 볼 수 있는 공간입니다.
+      실습 프롬프트와 완성본 소스코드는
+      <a href="https://github.com/lifeofpi-ux/vibecode-for-teacher" target="_blank" rel="noopener">GitHub 저장소</a>에서 확인하세요.
+    </p>
+
+    <div class="cards">
+      <article class="card">
+        <span class="icon">🧑‍🏫</span>
+        <span class="chapter">Ch 1. Antigravity 시작하기</span>
+        <h2>나만의 HTML 프로필 페이지</h2>
+        <p>
+          Antigravity IDE와의 첫 대화로 만드는 첫 번째 산출물입니다.
+          말 한마디로 연한 파란색 배경의 자기소개 페이지가 완성됩니다.
+        </p>
+        <div class="links">
+          <a class="btn btn-primary" href="./profile/">데모 보기</a>
+          <a class="btn btn-secondary" href="https://github.com/lifeofpi-ux/vibecode-for-teacher/tree/main/Part4-%EB%A1%9C%EC%BB%AC%EA%B0%9C%EB%B0%9C/Ch01-Antigravity-%ED%94%84%EB%A1%9C%ED%95%84-%ED%8E%98%EC%9D%B4%EC%A7%80" target="_blank" rel="noopener">프롬프트 · 소스</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="icon">🌟</span>
+        <span class="chapter">Ch 4. [실전 프로젝트] MCP × Supabase</span>
+        <h2>우리 반 실시간 칭찬 보드</h2>
+        <p>
+          React + Vite + Supabase Realtime으로 만드는 실전 프로젝트입니다.
+          체험판에서는 브라우저 창 2개를 열면 실시간 동기화도 경험할 수 있어요.
+        </p>
+        <div class="links">
+          <a class="btn btn-primary" href="./praise-board/">체험판 데모</a>
+          <a class="btn btn-secondary" href="https://github.com/lifeofpi-ux/vibecode-for-teacher/tree/main/Part4-%EB%A1%9C%EC%BB%AC%EA%B0%9C%EB%B0%9C/Ch04-MCP-%EC%8B%A4%EC%8B%9C%EA%B0%84-%ED%98%91%EC%97%85%EB%B3%B4%EB%93%9C" target="_blank" rel="noopener">프롬프트 · 소스</a>
+        </div>
+      </article>
+    </div>
+
+    <footer>
+      🎨 체험판 데모는 학습 참고용 예시이며, 실제 실습 결과물은 AI의 응답에 따라 조금씩 다를 수 있습니다.<br />
+      <a href="https://github.com/lifeofpi-ux/vibecode-for-teacher" target="_blank" rel="noopener">github.com/lifeofpi-ux/vibecode-for-teacher</a>
+    </footer>
+  </div>
+</body>
+</html>
