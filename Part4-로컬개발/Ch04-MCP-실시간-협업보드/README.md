@@ -1,9 +1,14 @@
-# Ch 4. [실전 프로젝트] MCP로 Supabase 실시간 협업 보드 만들기
+# Ch 4. MCP로 Supabase 실시간 협업 보드 만들기
 
 > 🖥 **완성 모습이 궁금하다면?** → [체험판 데모 보기](https://lifeofpi-ux.github.io/vibecode-for-teacher/praise-board/) · [완성본 소스코드](완성본/)
 > (체험판은 Supabase 없이 동작합니다. 창을 2개 열면 실시간 반영을 체험할 수 있어요!)
 
-Antigravity에서 MCP(Supabase 연결)를 설정한 뒤, 아래 프롬프트를 순서대로 사용합니다.
+Antigravity IDE에서 MCP(Supabase 연결)를 설정한 뒤, 아래 프롬프트를 순서대로 사용합니다.
+
+> 📌 **Antigravity 2.0 안내** — 2.0 발표 이후 Agent Manager는 IDE에서 분리되어 독립 앱이 되었고,
+> Antigravity IDE 안에서는 우측 **에이전트 패널(Ctrl+L, macOS는 Cmd+L)**로 통합되었습니다.
+> 아래 세 프롬프트는 모두 이 에이전트 패널에 입력합니다.
+> 새 대화를 시작하려면 패널 우측 상단의 [+] 버튼(New Conversation, Ctrl+Shift+L)을 클릭하세요.
 
 ## 1. PRD 작성 프롬프트 (에이전트 패널, Ctrl+L)
 
@@ -15,7 +20,7 @@ Antigravity에서 MCP(Supabase 연결)를 설정한 뒤, 아래 프롬프트를 
 - 입력하면 칭찬 카드가 보드에 추가된다
 - Supabase를 사용해 데이터를 저장한다
 - Supabase Realtime 기능으로 여러 브라우저 창에서 동시에 칭찬이 실시간 반영된다
-- 리액트 + Vite로 개발한다
+- React + Vite로 개발한다
 - 디자인은 깔끔하고 밝은 느낌으로 (교육 환경에 맞게)
 
 문서는 PRD.md 파일로 프로젝트 루트에 저장해줘.
@@ -37,7 +42,7 @@ Supabase에 칭찬 보드 앱을 위한 테이블을 만들어줘.
 Row Level Security는 일단 비활성화해줘 (테스트 목적).
 ```
 
-## 3. 앱 구현 프롬프트 (Agent Manager, Ctrl+E)
+## 3. 앱 구현 프롬프트 (에이전트 패널, Ctrl+L)
 
 ```
 @PRD.md 를 참고해서 실시간 칭찬 보드 앱을 만들어줘.

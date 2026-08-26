@@ -1,4 +1,4 @@
-# 요즘 교사를 위한 "바이브 코딩 + 웹앱 개발" 지침서 — 실습 프롬프트 모음
+# 요즘 교사를 위한 웹앱 만들기 with 바이브 코딩 — 실습 프롬프트 모음
 
 책의 실습 과정에서 **직접 타이핑하기에는 긴 프롬프트**들을 파트–챕터별로 모아두었습니다.
 아래 목차에서 원하는 챕터 폴더를 클릭하면 프롬프트가 바로 표시됩니다.
@@ -28,11 +28,11 @@
 | [Ch 3. Supabase를 활용한 To-Do 앱 만들기](Part3-Supabase-클라우드DB/Ch03-Supabase-ToDo-앱/) | 구글 AI Studio | 날짜별 To-Do 앱 풀스택 프롬프트 |
 | [Ch 4. 허용된 사용자만 접근 가능한 앱으로 변경하기](Part3-Supabase-클라우드DB/Ch04-사용자-인증-Supabase-Auth/) | 구글 AI Studio | Supabase Auth 인증 기능 추가 |
 
-### Part 4. 로컬환경에서 진짜 개발자처럼 일하기
+### Part 4. 로컬 환경에서 진짜 개발자처럼 일하기
 | 챕터 | 사용 도구 | 프롬프트 |
 |---|---|---|
-| [Ch 1. Antigravity 시작하기](Part4-로컬개발/Ch01-Antigravity-프로필-페이지/) | Antigravity | 첫 HTML 프로필 페이지 프롬프트 |
-| [Ch 4. [실전 프로젝트] MCP로 Supabase 실시간 협업 보드 만들기](Part4-로컬개발/Ch04-MCP-실시간-협업보드/) | Antigravity + MCP | PRD 작성 · 테이블 생성 · 앱 구현 3단계 |
+| [Ch 1. Antigravity IDE 시작하기](Part4-로컬개발/Ch01-Antigravity-프로필-페이지/) | Antigravity IDE | 첫 HTML 프로필 페이지 프롬프트 |
+| [Ch 4. MCP로 Supabase 실시간 협업 보드 만들기](Part4-로컬개발/Ch04-MCP-실시간-협업보드/) | Antigravity IDE + MCP | PRD 작성 · 테이블 생성 · 앱 구현 3단계 |
 
 ## 🖥 Part 4 산출물 웹앱 — 데모 & 완성본
 

@@ -1,7 +1,7 @@
 # 우리 반 실시간 칭찬 보드 — 완성본 소스코드
 
 책 Part 4의 실전 프로젝트 **"우리 반 실시간 칭찬 보드"**의 완성 예시 코드입니다.
-책을 따라 AI(Antigravity)에게 만들게 한 결과물과 비교하거나, 막혔을 때 참고용으로 사용하세요.
+책을 따라 AI(Antigravity IDE)에게 만들게 한 결과물과 비교하거나, 막혔을 때 참고용으로 사용하세요.
 
 > 🎮 설치 없이 완성 모습을 먼저 보고 싶다면 → [체험판 데모](https://lifeofpi-ux.github.io/vibecode-for-teacher/praise-board/)
 
