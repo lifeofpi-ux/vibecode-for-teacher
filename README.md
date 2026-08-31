@@ -63,19 +63,18 @@
 
 ---
 
-## Part 4 산출물 웹앱 — 데모 & 완성본
+## Part 4 산출물 웹앱 — 라이브 데모
 
-Part 4 실습에서 만드는 웹앱들의 **완성 모습을 설치 없이 바로 체험**할 수 있습니다.
+Part 4 실습에서 만드는 웹앱들의 **완성 모습을 설치 없이 브라우저에서 바로 체험**할 수 있습니다.
 
-> ### [Part 4 산출물 갤러리 바로가기](https://lifeofpi-ux.github.io/vibecode-for-teacher/)
+> ### [디지털 웹 서적 바로가기](https://lifeofpi-ux.github.io/vibecode-for-teacher/)
 
-| 산출물 | 라이브 데모 | 완성본 소스코드 |
-|---|---|---|
-| 나만의 HTML 프로필 페이지 (Ch 1) | [데모 보기](https://lifeofpi-ux.github.io/vibecode-for-teacher/profile/) | [완성본 폴더](Part4-로컬개발/Ch01-Antigravity-프로필-페이지/완성본/) |
-| 우리 반 실시간 칭찬 보드 (Ch 4) | [체험판 데모](https://lifeofpi-ux.github.io/vibecode-for-teacher/praise-board/) | [완성본 폴더](Part4-로컬개발/Ch04-MCP-실시간-협업보드/완성본/) |
+| 산출물 | 라이브 데모 바로가기 |
+|---|---|
+| 나만의 HTML 프로필 페이지 (Ch 1) | [라이브 데모 보기](https://lifeofpi-ux.github.io/vibecode-for-teacher/profile/) |
+| 우리 반 실시간 칭찬 보드 (Ch 4) | [실시간 체험판 데모](https://lifeofpi-ux.github.io/vibecode-for-teacher/praise-board/) |
 
-- 칭찬 보드 데모는 Supabase 없이 동작하는 **체험판**입니다. 창을 2개 열면 실시간 반영도 체험할 수 있습니다. (새로고침 시 초기화)
-- 완성본 소스코드는 책을 따라 만든 결과물과 비교하거나 막혔을 때 참고용으로 활용하세요.
+- 칭찬 보드 데모는 브라우저 창 2개를 나란히 열면 실시간 반영도 체험할 수 있습니다.
 
 ---
 

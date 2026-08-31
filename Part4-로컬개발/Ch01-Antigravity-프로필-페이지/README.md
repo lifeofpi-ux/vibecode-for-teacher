@@ -1,6 +1,6 @@
 # Ch 1. Antigravity IDE 시작하기
 
-> 🖥 **완성 모습이 궁금하다면?** → [라이브 데모 보기](https://lifeofpi-ux.github.io/vibecode-for-teacher/profile/) · [완성본 소스코드](완성본/)
+> 🖥 **완성 모습이 궁금하다면?** → [라이브 데모 보기](https://lifeofpi-ux.github.io/vibecode-for-teacher/profile/)
 
 Antigravity IDE 우측 에이전트 패널(Ctrl+L, macOS는 Cmd+L)의 입력창에 아래 내용을 붙여넣습니다.
 `[여기에 본인 이름 입력]` 부분은 실제 이름으로 바꿔주세요.
