@@ -321,14 +321,157 @@
         </span>
       </a>
       <nav class="book-nav-links">
+        <button type="button" class="nav-pill-btn open-toc-btn" style="cursor: pointer;" aria-label="전체 목차 열기">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <span>목차</span>
+        </button>
         <a href="https://www.hanbit.co.kr/store/books/look.php?p_code=B0000000000" target="_blank" rel="noopener"
           class="nav-pill-btn primary"
-          style="background: var(--brand-blue); border-color: var(--brand-blue); padding: 0.45rem 1rem; font-size: 0.86rem; font-weight: 700;">
-          도서 구매하기
+          style="background: var(--brand-blue); border-color: var(--brand-blue); padding: 0.4rem 0.85rem; font-size: 0.84rem; font-weight: 700;">
+          도서 구매
         </a>
       </nav>
     </div>
   </header>
+
+  <!-- Mobile Quick Nav Chips (스마트폰 상단 가로 스크롤 퀵 탭) -->
+  <nav class="mobile-quick-nav" aria-label="빠른 챕터 이동">
+    <button type="button" class="quick-chip quick-chip-toc open-toc-btn" style="cursor: pointer;">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <span>전체목차</span>
+    </button>
+    <a href="#intro-author" class="quick-chip active" data-target="intro-author">저자의 말</a>
+    <a href="#prologue-p1" class="quick-chip" data-target="prologue-p1">프롤로그</a>
+    <a href="#part1-ch04" class="quick-chip" data-target="part1-ch04">Part 1. 문제발견</a>
+    <a href="#part2-ch03" class="quick-chip" data-target="part2-ch03">Part 2. AI Studio</a>
+    <a href="#part3-ch03" class="quick-chip" data-target="part3-ch03">Part 3. Supabase</a>
+    <a href="#part4-ch01" class="quick-chip" data-target="part4-ch01">Part 4. 로컬개발</a>
+    <a href="#epilogue-e1" class="quick-chip" data-target="epilogue-e1">에필로그</a>
+    <a href="profile/" target="_blank" class="quick-chip">🚀 산출물 데모</a>
+  </nav>
+
+  <!-- Mobile TOC Backdrop & Drawer -->
+  <div id="mobile-toc-backdrop" class="mobile-toc-backdrop"></div>
+  <aside id="mobile-toc-drawer" class="mobile-toc-drawer" aria-label="모바일 전체 목차">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        <span>전체 목차 바로가기</span>
+      </div>
+      <button type="button" id="mobile-toc-close-btn" class="drawer-close-btn" aria-label="목차 닫기">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="drawer-body">
+      <div class="sidebar-search-box">
+        <input type="text" id="drawer-search-input" class="sidebar-search-input" placeholder="목차 / 키워드 검색..." />
+      </div>
+
+      <div class="nav-section-title">시작하며</div>
+      <a href="#intro-author" class="nav-item-link active">
+        <span class="nav-item-badge">Intro</span>
+        <span>저자의 말 (머리말)</span>
+      </a>
+
+      <div class="nav-section-title">프롤로그: 개발을 몰라도 괜찮아!</div>
+      <a href="#prologue-p1" class="nav-item-link">
+        <span class="nav-item-badge" style="background:#e0f2fe; color:#0369a1;">P-1</span>
+        <span>코딩, 어렵게 느껴지시나요?</span>
+      </a>
+      <a href="#prologue-p2" class="nav-item-link">
+        <span class="nav-item-badge" style="background:#e0f2fe; color:#0369a1;">P-2</span>
+        <span>바이브 코딩의 본질과 철학</span>
+      </a>
+      <a href="#prologue-p3" class="nav-item-link">
+        <span class="nav-item-badge" style="background:#e0f2fe; color:#0369a1;">P-3</span>
+        <span>이 책을 통해 만들게 될 것들</span>
+      </a>
+
+      <div class="nav-section-title">Part 1. 문제 발견</div>
+      <a href="#part1-ch04" class="nav-item-link">
+        <span class="nav-item-badge">Ch 4</span>
+        <span>PRD 쉽게 써보기 (출석체크)</span>
+      </a>
+      <a href="#part1-ch06" class="nav-item-link">
+        <span class="nav-item-badge">Ch 6</span>
+        <span>단일 파일 웹앱 (출석체크)</span>
+      </a>
+      <a href="#part1-ch11" class="nav-item-link">
+        <span class="nav-item-badge">Ch 11</span>
+        <span>Lovable 글쓰기 SNS</span>
+      </a>
+
+      <div class="nav-section-title">Part 2. AI Studio & API</div>
+      <a href="#part2-ch03" class="nav-item-link">
+        <span class="nav-item-badge">Ch 3</span>
+        <span>급식 조회 앱 (+개선 3종)</span>
+      </a>
+      <a href="#part2-ch07" class="nav-item-link">
+        <span class="nav-item-badge">Ch 7</span>
+        <span>사물인식 영어학습 (+확장 2종)</span>
+      </a>
+      <a href="#part2-ch08" class="nav-item-link">
+        <span class="nav-item-badge">Ch 8</span>
+        <span>학생 글쓰기 AI 피드백</span>
+      </a>
+
+      <div class="nav-section-title">Part 3. Supabase 클라우드 DB</div>
+      <a href="#part3-ch03" class="nav-item-link">
+        <span class="nav-item-badge">Ch 3</span>
+        <span>Supabase To-Do 일정 관리 앱</span>
+      </a>
+      <a href="#part3-ch04" class="nav-item-link">
+        <span class="nav-item-badge">Ch 4</span>
+        <span>Supabase Auth 사용자 인증</span>
+      </a>
+
+      <div class="nav-section-title">Part 4. 로컬 개발 & MCP</div>
+      <a href="#part4-ch01" class="nav-item-link">
+        <span class="nav-item-badge">Ch 1</span>
+        <span>Antigravity 프로필 페이지</span>
+      </a>
+      <a href="#part4-ch04" class="nav-item-link">
+        <span class="nav-item-badge">Ch 4</span>
+        <span>MCP 실시간 협업 칭찬 보드</span>
+      </a>
+
+      <div class="nav-section-title">에필로그: 이제 당신도 개발자</div>
+      <a href="#epilogue-e1" class="nav-item-link">
+        <span class="nav-item-badge" style="background:#faf5ff; color:#7e22ce;">E-1</span>
+        <span>바이브 코딩, 무엇을 느끼셨나요?</span>
+      </a>
+      <a href="#epilogue-e2" class="nav-item-link">
+        <span class="nav-item-badge" style="background:#faf5ff; color:#7e22ce;">E-2</span>
+        <span>교실을 넘어: 일상 문제 해결</span>
+      </a>
+      <a href="#epilogue-e3" class="nav-item-link">
+        <span class="nav-item-badge" style="background:#faf5ff; color:#7e22ce;">E-3</span>
+        <span>앞으로의 여정을 위한 로드맵</span>
+      </a>
+
+      <div class="nav-section-title">실습 산출물 데모</div>
+      <a href="profile/" target="_blank" class="nav-item-link">
+        <span>프로필 페이지 데모 ↗</span>
+      </a>
+      <a href="praise-board/" target="_blank" class="nav-item-link">
+        <span>칭찬 보드 실시간 데모 ↗</span>
+      </a>
+    </div>
+  </aside>
 
   <!-- Hero Section -->
   <section class="book-hero">
@@ -1626,6 +1769,22 @@ Row Level Security는 일단 비활성화해줘 (테스트 목적).</pre>
     </main>
   </div>
 
+  <!-- Floating Action Buttons (모바일 전용 플로팅 조작) -->
+  <div class="book-fab-container">
+    <button type="button" id="fab-top-btn" class="fab-btn fab-top" title="맨 위로 가기" aria-label="맨 위로 가기">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+    <button type="button" id="fab-toc-btn" class="fab-btn fab-toc" title="목차 열기" aria-label="전체 목차 열기">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
   <!-- Global Footer -->
   <footer class="book-footer">
     <p>《요즘 교사를 위한 웹앱 만들기 with 바이브 코딩》 — 디지털 웹 서적 & 실습 프롬프트</p>
@@ -1641,33 +1800,41 @@ Row Level Security는 일단 비활성화해줘 (테스트 목적).</pre>
 
   <script src="assets/book-theme.js"></script>
   <script>
-    const searchInput = document.getElementById('chapter-search-input');
+    const searchInputs = [
+      document.getElementById('chapter-search-input'),
+      document.getElementById('drawer-search-input')
+    ].filter(Boolean);
     const chapters = document.querySelectorAll('.searchable-chapter');
 
-    searchInput.addEventListener('input', (e) => {
-      const q = e.target.value.toLowerCase().trim();
-      chapters.forEach(ch => {
-        const text = ch.innerText.toLowerCase();
-        if (text.includes(q)) {
-          ch.style.display = 'block';
-        } else {
-          ch.style.display = 'none';
-        }
+    searchInputs.forEach(input => {
+      input.addEventListener('input', (e) => {
+        const q = e.target.value.toLowerCase().trim();
+        searchInputs.forEach(other => {
+          if (other !== input) other.value = e.target.value;
+        });
+        chapters.forEach(ch => {
+          const text = ch.innerText.toLowerCase();
+          if (text.includes(q)) {
+            ch.style.display = 'block';
+          } else {
+            ch.style.display = 'none';
+          }
+        });
       });
     });
 
-    const navLinks = document.querySelectorAll('.book-sidebar .nav-item-link');
+    const allNavLinks = document.querySelectorAll('.book-sidebar .nav-item-link, .mobile-toc-drawer .nav-item-link');
     window.addEventListener('scroll', () => {
       let currentId = '';
       chapters.forEach(ch => {
         const rect = ch.getBoundingClientRect();
-        if (rect.top <= 140 && rect.bottom >= 100) {
+        if (rect.top <= 160 && rect.bottom >= 80) {
           currentId = ch.getAttribute('id');
         }
       });
 
       if (currentId) {
-        navLinks.forEach(link => {
+        allNavLinks.forEach(link => {
           if (link.getAttribute('href') === `#${currentId}`) {
             link.classList.add('active');
           } else if (link.getAttribute('href').startsWith('#')) {
@@ -1675,7 +1842,7 @@ Row Level Security는 일단 비활성화해줘 (테스트 목적).</pre>
           }
         });
       }
-    });
+    }, { passive: true });
   </script>
 </body>
 
