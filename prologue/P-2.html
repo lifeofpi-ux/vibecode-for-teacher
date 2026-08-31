@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P-2. '바이브 코딩', 문제의식에서 출발하는 개발 — 요즘 교사를 위한 웹앱 만들기 with 바이브 코딩</title>
+  <link rel="stylesheet" href="../assets/book-theme.css" />
+</head>
+
+<body>
+  <div id="reading-progress-container">
+    <div id="reading-progress-bar"></div>
+  </div>
+
+  <header class="book-header">
+    <div class="book-header-inner">
+      <a href="../index.html" class="book-brand">
+        <span class="book-logo-tag">도서 부록</span>
+        <span class="book-title-text">
+          요즘 교사를 위한 웹앱 만들기
+          <span class="book-title-sub">with 바이브 코딩</span>
+        </span>
+      </a>
+      <nav class="book-nav-links">
+        <a href="https://www.hanbit.co.kr/store/books/look.php?p_code=B0000000000" target="_blank" rel="noopener" class="nav-pill-btn primary" style="background: var(--brand-blue); border-color: var(--brand-blue); padding: 0.45rem 1rem; font-size: 0.86rem; font-weight: 700;">
+          도서 구매하기
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="book-page-wrap">
+    <article class="book-article">
+      <div class="chapter-meta-row">
+        <span class="chapter-badge">프롤로그</span>
+        <span class="chapter-badge orange">P-2</span>
+        <span class="read-time-badge">소요 시간: 약 4분</span>
+      </div>
+
+      <h1 class="book-chapter-title">'바이브 코딩', 문제의식에서 출발하는 개발</h1>
+
+      <h2>1. 인공지능 거장의 고백: "나는 이제 코딩하지 않고, 바이브에 맡긴다"</h2>
+      <p>소프트웨어 역사상 가장 드라마틱한 변화가 지금 이 순간 일어나고 있습니다. 테슬라의 자율주행(Autopilot) 팀을 이끌고 오픈AI의 창립 멤버이자 수석 과학자였던 안드레이 카파시(Andrej
+        Karpathy). 그는 수십 년간 전 세계에서 가장 정교한 코드를 짜온 권위자입니다. 그런 그가 최근 자신의 SNS에 올린 짧은 문장은 전 세계 테크 업계를 큰 충격에 빠뜨렸습니다.</p>
+
+      <div class="box-question">
+        <div class="box-header">Andrej Karpathy의 바이브 코딩 선언</div>
+        <div class="box-body">
+          <span class="vibe-citation" title="출처: 안드레이 카파시 X 포스팅">"저는 <strong>'바이브 코딩(Vibe Coding)'</strong>이라는 새로운 코딩
+            방식을 좋아합니다. 즉, 분위기에 완전히 몰입하고, 기하급수적인 증가를 받아들이고, 코드가 존재한다는 사실조차 잊어버리는 거죠. (There's a new kind of coding I call
+            'vibe coding', where you fully give in to the vibes, embrace exponentials, and forget that the code even
+            exists.)"</span><sup class="citation-anchor"><a href="#ref-1"
+              style="color: inherit; text-decoration: none;">[1]</a></sup>
+        </div>
+      </div>
+
+      <p>이 말은 무슨 뜻일까요? 수억 줄의 코드를 읽어내던 그가 왜 코딩 대신 '바이브'라는 추상적인 단어를 선택했을까요? 이유는 간단합니다. 이제 AI가 인간보다 훨씬 더 빠르고 정확하게 코드를 작성할 수
+        있게 되었기 때문입니다.</p>
+
+      <p>카파시는 이제 컴퓨터와 대화할 때 '어떤 문법을 써서 기능을 구현할까' 고민하는 대신, <strong>'이 소프트웨어가 어떤 느낌으로 작동해야 하는지, 어떤 흐름으로 사용자와 상호작용해야
+          하는지'</strong>라는 본질적인 의도(Vibe)를 AI에게 전달하는 데 대부분의 시간을 씁니다.</p>
+
+      <h2>2. 패러다임의 대전환: '어떻게(How)'에서 '무엇을(What)'으로</h2>
+      <p>우리가 그동안 코딩을 어렵게 느꼈던 이유는 항상 '어떻게(How)'라는 기술적 구현 방법에 매몰되었기 때문입니다.</p>
+
+      <ul style="margin-left: 1.25rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.85;">
+        <li style="margin-bottom: 0.6rem;"><strong>과거의 코딩 (How 중심)</strong>: "화면에 버튼을 하나 만들려면 어떤 라이브러리를 설치해야 하고, 가로세로
+          좌표는 어떻게 설정하며, 클릭했을 때 실행될 함수명은 무엇으로 정해야 하는가?"를 고민하느라 정작 그 버튼이 왜 필요한지에 대한 고민을 놓쳤습니다.</li>
+        <li style="margin-bottom: 0.6rem;"><strong>바이브 코딩 (What 중심)</strong>: "나는 우리 반 아이들이 자신의 이름을 입력하면 오늘 하루 들으면 좋은 응원
+          문구가 무작위로 뜨는 따뜻한 분위기의 웹페이지를 만들고 싶어."라고 '무엇을' 만들지 결정하는 데 집중합니다. 공구(코드)를 다루는 손의 숙련도보다, 그 도구로 어떤 가치를 만들어낼 것인가를
+          상상하는 '의도와 기획'이 더 중요해진 것입니다.</li>
+      </ul>
+
+      <p>선생님들께서 그동안 기술에 좌절했던 이유는 손재주(코딩 문법)가 부족했기 때문이지, 상상력이 부족했기 때문이 아닙니다. 바이브 코딩 시대는 목적지를 명확히 아는 사람이 가장 뛰어난 항해사가 되는
+        시대입니다.</p>
+
+      <h2>3. 바이브 코딩의 3단계 순환 프로세스: See - Say - Run</h2>
+      <p>바이브 코딩은 단순히 "알아서 해줘"라고 무책임하게 던지는 방임이 아닙니다. AI와 호흡을 맞추는 <strong>'See - Say - Run'</strong>이라는 명확한 논리적 순환 구조를
+        가집니다.</p>
+
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.85rem; margin: 1.75rem 0;">
+        <div
+          style="background: var(--bg-app); border: 1px solid var(--border-color); padding: 1.1rem; border-radius: var(--radius-sm);">
+          <h4 style="color: var(--brand-blue-dark); margin: 0 0 0.35rem;">1. See (정확히 관찰하기)</h4>
+          <p style="font-size: 0.88rem; margin: 0; line-height: 1.55;">현재 내가 만든 앱의 상태를 냉철하게 확인합니다. 버튼 크기, 이미지 노출 여부, 에러
+            메시지 등을 점검합니다.</p>
+        </div>
+        <div
+          style="background: var(--bg-app); border: 1px solid var(--border-color); padding: 1.1rem; border-radius: var(--radius-sm);">
+          <h4 style="color: var(--brand-orange-dark); margin: 0 0 0.35rem;">2. Say (명확히 설명하기)</h4>
+          <p style="font-size: 0.88rem; margin: 0; line-height: 1.55;">관찰한 내용을 바탕으로 AI에게 사람의 언어로 요구합니다. "버튼 크기를 키우고 에러
+            메시지는 친절한 한국어로 바꿔줘"라고 논리적으로 설명합니다.</p>
+        </div>
+        <div
+          style="background: var(--bg-app); border: 1px solid var(--border-color); padding: 1.1rem; border-radius: var(--radius-sm);">
+          <h4 style="color: #16a34a; margin: 0 0 0.35rem;">3. Run (즉시 실행 & 확인)</h4>
+          <p style="font-size: 0.88rem; margin: 0; line-height: 1.55;">AI가 수정한 결과물을 즉시 브라우저에서 실행해 보고, 다시 1단계로 돌아가 의도했던
+            바가 구현되었는지 확인합니다.</p>
+        </div>
+      </div>
+
+      <p>이 과정은 마치 수업 시간에 아이들의 반응을 살피며(See), 즉석에서 설명의 난이도를 조절하고(Say), 아이들의 이해도를 확인하는(Run) 선생님들의 수업 방식과 정확히 일치합니다.</p>
+
+      <h2>4. 교실에서 발휘되는 교사만의 독보적인 '바이브'</h2>
+      <p>일반 개발자들은 이해하기 어려운, 오직 교사만이 가진 독보적인 데이터와 직관이 있습니다.</p>
+
+      <ul style="margin-left: 1.25rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.85;">
+        <li style="margin-bottom: 0.4rem;">"이 기능을 넣으면 우리 반 아이들이 분명히 이렇게 장난치며 시스템을 건드릴 텐데?"</li>
+        <li style="margin-bottom: 0.4rem;">"이 설명은 아이들이 이해하기에 너무 어려우니 더 쉬운 비유로 표현해주는 버튼이 있으면 좋겠어."</li>
+        <li style="margin-bottom: 0.4rem;">"이 앱의 폰트는 읽기 장애가 있는 학생들도 편하게 읽을 수 있는 서체였으면 좋겠어."</li>
+      </ul>
+
+      <p>이런 섬세하고 교육적인 '바이브'가 바로 최신 개발의 핵심 소스입니다. 코드를 한 줄 더 외우는 것보다 학생을 깊이 이해하는 마음이 더 훌륭한 코드로 변환되는 시대가 되었습니다.</p>
+
+      <h2>5. 기술 '하청'은 AI에게, 선생님은 '총감독'으로</h2>
+      <p>바이브 코딩의 핵심은 <strong>'주도권'</strong>입니다. 더 이상 기술에 끌려다니지 마세요. 선생님들께서는 전체적인 방향을 결정하고 디자인의 톤앤매너를 지정하며, AI가 작업한 결과물을
+        검수하는 <strong>'총감독'</strong> 역할을 수행하시면 됩니다.</p>
+
+      <div class="box-summary">
+        <div class="box-header">Summary: LLM이 어떻게 내 말을 코드로 바꾸나요?</div>
+        <div class="box-body">
+          챗GPT, 클로드, 제미나이 같은 최신 거대언어모델(LLM)은 전 세계에 존재하는 거의 모든 공개 소프트웨어 코드를 학습했습니다. 우리가 말하는 '의도'와 '맥락'을 이해하고, 수조 개의 확률
+          데이터 중에서 우리의 요구사항에 가장 적합한 코드 조각들을 순식간에 조합해 냅니다. 우리가 명확하고 구체적으로 '바이브'를 설명할수록 결과물은 더욱 정교해집니다.
+        </div>
+      </div>
+
+      <div class="references-section" id="ref-1">
+        <div class="references-title">참고문헌 (References)</div>
+        <div class="reference-item">
+          <strong>[1]</strong>
+          <span>안드레이 카파시(Andrej Karpathy) 공식 X 포스팅: <a href="https://x.com/karpathy/status/1886192184808149383"
+              target="_blank" rel="noopener">https://x.com/karpathy/status/1886192184808149383</a></span>
+        </div>
+      </div>
+
+      <footer class="chapter-nav-footer">
+        <a href="P-1.html" class="chapter-nav-card">
+          <span class="chapter-nav-label">이전</span>
+          <span class="chapter-nav-title">P-1. 코딩, 아직도 어렵게만 느껴지시나요?</span>
+        </a>
+        <a href="P-3.html" class="chapter-nav-card next">
+          <span class="chapter-nav-label">다음</span>
+          <span class="chapter-nav-title">P-3. 이 책을 통해 만들게 될 것들, 그리고 얻게 될 것들</span>
+        </a>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="book-footer">
+    <p>《요즘 교사를 위한 웹앱 만들기 with 바이브 코딩》 — 도서 부록</p>
+    <p>저자: 이상선, 김진관, 이대형, 윤신영, 김상섭 지음 | 출판: 한빛미디어</p>
+  </footer>
+
+  <script src="../assets/book-theme.js"></script>
+</body>
+
+</html>

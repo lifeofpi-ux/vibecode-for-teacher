@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P-1. 코딩, 아직도 어렵게만 느껴지시나요? — 요즘 교사를 위한 웹앱 만들기 with 바이브 코딩</title>
+  <link rel="stylesheet" href="../assets/book-theme.css" />
+</head>
+
+<body>
+  <div id="reading-progress-container">
+    <div id="reading-progress-bar"></div>
+  </div>
+
+  <header class="book-header">
+    <div class="book-header-inner">
+      <a href="../index.html" class="book-brand">
+        <span class="book-logo-tag">도서 부록</span>
+        <span class="book-title-text">
+          요즘 교사를 위한 웹앱 만들기
+          <span class="book-title-sub">with 바이브 코딩</span>
+        </span>
+      </a>
+      <nav class="book-nav-links">
+        <a href="https://www.hanbit.co.kr/store/books/look.php?p_code=B0000000000" target="_blank" rel="noopener" class="nav-pill-btn primary" style="background: var(--brand-blue); border-color: var(--brand-blue); padding: 0.45rem 1rem; font-size: 0.86rem; font-weight: 700;">
+          도서 구매하기
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="book-page-wrap">
+    <article class="book-article">
+      <div class="chapter-meta-row">
+        <span class="chapter-badge">프롤로그</span>
+        <span class="chapter-badge orange">P-1</span>
+        <span class="read-time-badge">소요 시간: 약 4분</span>
+      </div>
+
+      <h1 class="book-chapter-title">코딩, 아직도 어렵게만 느껴지시나요?</h1>
+
+      <h2>1. 학교 현장의 디지털 역설: 도구는 많은데 왜 내 일은 늘어날까?</h2>
+      <p>우리는 지금 그 어느 때보다 화려한 디지털 교육 환경 속에 살고 있습니다. 교실마다 전자칠판이 놓이고, 학생들에게는 1인 1태블릿이 보급되었으며, 나이스(NEIS)를 비롯한 각종 행정 시스템,
+        에듀테크 서비스들이 날이 갈수록 고도화되고 있습니다. 수많은 기업들이 "이 앱만 쓰면 선생님의 업무가 줄어듭니다"라고 광고하며 새로운 도구들을 쏟아냅니다. 하지만 역설적이게도 선생님들의 실질적인 업무
+        강도는 낮아지지 않았습니다. 오히려 관리해야 할 데이터와 익혀야 할 인터페이스, 관리해야 할 아이디와 비밀번호만 늘어난 기분이 들 때가 많죠.</p>
+
+      <p>사실 원인은 명확합니다. 상용 개발업체가 제작한 대부분의 디지털 도구는 <strong>'범용성'</strong>을 목적으로 만들어졌기 때문입니다. 수만 명, 수십만 명의 교사를 동시에 만족시키기 위해
+        만들어진 서비스는, 정작 '우리 반 혜심이가 오늘 제출한 독후감에서 나타난 독특한 감정 키워드를 추출해서 내일 상담에 활용하고 싶다'는 선생님의 아주 특수하고 구체적인 요구를 해결해주지 못합니다.
+      </p>
+
+      <p>대중적인 에듀테크 도구들은 '평균적인 학생'과 '일반적인 교실'을 가정합니다. 하지만 교육은 평균이 아닌 <strong>'개별성'</strong>의 영역입니다. 우리는 결국 범용 도구의 빈틈을 메우기
+        위해 엑셀을 켜고, 데이터를 복사해서 붙여넣기를 반복하며, 결국 아날로그보다 더 아날로그 같은 디지털 노동의 늪으로 다시 빠져듭니다.</p>
+
+      <h2>2. 우리가 그동안 코딩을 포기할 수밖에 없었던 이유</h2>
+      <p>그동안 "코딩 한번 배워볼까?" 하고 마음먹었던 선생님들을 가로막았던 것은 세 가지 거대한 벽이었습니다.</p>
+
+      <p><strong>첫째는 '문법의 벽'입니다.</strong> 기존의 코딩 입문서는 '변수', '함수', '클래스' 같은 용어부터 시작해 파이썬이나 자바스크립트의 문법을 외우게 합니다. 이는 마치
+        외국어를 배울 때 인사말도 하기 전에 고전문학의 문법적 구조와 16세기 고어를 배우는 것과 같습니다. 점 하나, 세미콜론 하나만 틀려도 에러 메시지를 내뱉으며 작동을 멈추는 컴퓨터의 예민함에 우리는
+        금방 지치고 맙니다.</p>
+
+      <p><strong>둘째는 '맥락의 부재'입니다.</strong> 예제 파일들은 대개 '구구단 출력하기'나 '별 찍기' 같은 수학적인 내용들입니다. 이런 예제들은 논리력 향상에는 도움이 될지 몰라도, 내일
+        아침 1교시에 아이들에게 보여줄 '무작위 발표자 추첨기'를 만드는 데는 아무런 영감을 주지 못합니다. 나에게 당장 필요한 실용성이 느껴지지 않는 공부는 금세 동력을 잃고 맙니다.</p>
+
+      <p><strong>셋째는 '설정의 지옥'입니다.</strong> 코딩을 시작하기도 전에 파이썬을 설치하고, 환경 변수를 설정하고, 편집기를 다운로드하다가 하루가 다 갑니다. 터미널에 알 수 없는
+        명령어들을 입력하다 보면 결국 포기 선언을 하게 됩니다.</p>
+
+      <div class="box-easy">
+        <div class="box-header">조금 더 쉽게</div>
+        <div class="box-body">
+          과거의 코딩 공부가 '자동차 엔진의 연소 원리와 변속기 기어 비율'을 밑바닥부터 공부하는 과정이었다면, 이제는 <strong>'AI라는 든든한 내비게이션과 자율주행 기능'</strong>을 갖춘
+          신형 자동차에 올라타 일단 운전대를 잡아보는 것으로 패러다임이 바뀌었습니다. 목적지(교육적 의도)만 명확하다면, 엔진이 어떻게 돌아가는지는 차근차근 알아가도 좋습니다.
+        </div>
+      </div>
+
+      <h2>3. 지침(Guide)이 곧 개발(Development)인 시대</h2>
+      <p>2025년 이후 우리가 마주한 개발의 본질은 더 이상 '타이핑 노동'이 아닙니다. 이제 코딩은 <strong>'논리적인 사고를 바탕으로 AI에게 명확하게 목적하는 바를 안내하고, 지시하는
+          과정'</strong>으로 재정의됩니다.</p>
+
+      <p>교사는 본질적으로 이미 훌륭한 안내자입니다. 학생들에게 수행평가의 기준을 설명하고, 활동 순서를 1번부터 5번까지 안내하며, 다양한 상황에 대해 지침을 주는 일상적인 행위가 프로그래밍의 핵심
+        논리(조건문, 반복문, 함수)와 정확히 일치합니다.</p>
+
+      <p>여러분이 동료 선생님들에게 "우리 반 아이들의 수학 평균보다 20점 가량 낮은 학생들을 위해 맞춤형 학습지를 만들어보면 어떨까요?"라고 말할 수 있으시다면, 여러분은 이미 앱을 만들 준비가 80%
+        이상 끝난 것입니다. 나머지 구현은 AI가 담당하기 때문입니다.</p>
+
+      <h2>4. 왜 '선생님'이 직접 앱을 만들어야 하는가?</h2>
+      <p>전문 개발자가 만들어준 완성형 앱을 쓰는 것이 표면적으로는 편해 보일 수 있습니다. 하지만 교사가 직접 만드는 앱에는 거대 IT 기업이 수천억 원을 들여도 흉내 내기 힘든 <strong>'교육적
+          철학'</strong>이 담깁니다.</p>
+
+      <ul style="margin-left: 1.25rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.85;">
+        <li style="margin-bottom: 0.6rem;"><strong>교실의 맥락과 디테일</strong>: 우리 반 아이들만 아는 농담, 우리 학교만의 독특한 급식 시간, 선생님이 강조하는
+          수업 철학이 앱의 작은 버튼 하나, 문구 하나에 스며듭니다. 아이들은 선생님이 자신들을 위해 직접 만든 도구를 볼 때 기술 이상의 사랑과 존중을 느낍니다.</li>
+        <li style="margin-bottom: 0.6rem;"><strong>혁신적 속도와 유연성</strong>: 건의 사항 게시판에 "이 기능 추가해 주세요"라고 쓰고 누군가 만들어주길 6개월간
+          기다리는 대신, AI와 함께 오늘 밤 10분 만에 뚝딱 만들어서 내일 아침 시간에 바로 적용할 수 있습니다.</li>
+        <li style="margin-bottom: 0.6rem;"><strong>교사의 효능감과 자존감</strong>: 수동적으로 도구를 소비하는 입장에서 기술을 부려 문제를 해결하는 '창조자'로 거듭날
+          때 느끼는 효능감은 직무 몰입도를 크게 높여줍니다.</li>
+      </ul>
+
+      <h2>5. "불편함"이라는 보물지도를 따라오세요</h2>
+      <p>이 책은 여러분을 소프트웨어 엔지니어로 만드는 것이 목표가 아닙니다. 기술이라는 강력한 에너지를 다룰 수 있는 <strong>'주권'</strong>을 선생님들께 돌려드리는 것이 목표입니다.</p>
+
+      <p>일상에서 느끼는 작은 아쉬움들을 그냥 지나치지 마세요. "아이들의 이 데이터를 매번 손으로 옮기기 번거로운데?", "이 설문 결과를 좀 더 직관적인 그래프로 보여줄 순 없을까?" 이런 사소한 질문들이
+        여러분의 코딩 보물지도입니다. 그 의도를 AI에게 건네는 용기만 있다면, 여러분은 이미 개발의 길에 들어선 것입니다.</p>
+
+      <p>자, 이제 "나는 못 해"라는 말 대신 <strong>"이게 불편한데 AI한테 한 번 물어볼까?"</strong>라는 질문으로 이 책의 첫 페이지를 넘겨주세요.</p>
+
+      <div class="box-summary">
+        <div class="box-header">Summary: 노코드와 로코드의 실용적 차이</div>
+        <div class="box-body">
+          <strong>노코드(No-Code)</strong>는 코드를 전혀 사용하지 않는 서비스(예: 노션, 구글 폼)로, 배우기 쉽지만 정해진 틀을 벗어나기 어렵습니다.<br /><br />
+          반면 AI의 도움을 받아 최소한의 코드를 다루는 <strong>'로코드(Low-Code)'</strong> 방식은 마치 레고 블록을 조립하듯 무한한 확장성을 제공합니다. 이 책에서 우리가 배울
+          방식은 바로 이 '로코드' 방식입니다. 문법 암기는 건너뛰고 논리의 조립에만 집중합니다.
+        </div>
+      </div>
+
+      <footer class="chapter-nav-footer">
+        <a href="index.html" class="chapter-nav-card">
+          <span class="chapter-nav-label">이전</span>
+          <span class="chapter-nav-title">프롤로그 개요</span>
+        </a>
+        <a href="P-2.html" class="chapter-nav-card next">
+          <span class="chapter-nav-label">다음</span>
+          <span class="chapter-nav-title">P-2. '바이브 코딩', 문제의식에서 출발하는 개발</span>
+        </a>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="book-footer">
+    <p>《요즘 교사를 위한 웹앱 만들기 with 바이브 코딩》 — 도서 부록</p>
+    <p>저자: 이상선, 김진관, 이대형, 윤신영, 김상섭 지음 | 출판: 한빛미디어</p>
+  </footer>
+
+  <script src="../assets/book-theme.js"></script>
+</body>
+
+</html>
