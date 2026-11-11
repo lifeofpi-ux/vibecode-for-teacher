@@ -63,6 +63,21 @@
 
 ---
 
+## 영상으로 보기 — 파트마다 2분
+
+소리 없이 봐도 되도록 화면 문구만으로 만든 짧은 영상입니다. 책을 읽기 전에 흐름을 잡거나, 읽은 뒤 한 파트씩 정리할 때 보세요. 그림을 누르면 강의 자료 페이지에서 재생됩니다.
+
+| 편 | 영상 | 내용 |
+|---|---|---|
+| 1편 · Part 1 (1:46) | [![1편 한숨 하나를 앱으로](https://tigerjk9.github.io/vibecoding-lecture/assets/video/vibe-ep1-poster.jpg)](https://tigerjk9.github.io/vibecoding-lecture/#video-part1) | **한숨 하나를 앱으로**<br>교실의 한숨 하나를 PRD 한 장으로 적고, HTML 파일 하나짜리 앱으로 엽니다. |
+| 2편 · Part 2 (1:32) | [![2편 앱에 지식을 더하다](https://tigerjk9.github.io/vibecoding-lecture/assets/video/vibe-ep2-poster.jpg)](https://tigerjk9.github.io/vibecoding-lecture/#video-part2) | **앱에 지식을 더하다**<br>고립된 섬 같은 앱에 급식 정보 같은 바깥 데이터와 AI를 붙입니다. |
+| 3편 · Part 3 (1:28) | [![3편 앱에 기억과 문지기를 달다](https://tigerjk9.github.io/vibecoding-lecture/assets/video/vibe-ep3-poster.jpg)](https://tigerjk9.github.io/vibecoding-lecture/#video-part3) | **앱에 기억과 문지기를 달다**<br>새로고침해도 남는 앱, 로그인한 사람만 여는 앱으로 바꿉니다. |
+| 4편 · Part 4 (1:44) | [![4편 내 컴퓨터를 작업실로](https://tigerjk9.github.io/vibecoding-lecture/assets/video/vibe-ep4-poster.jpg)](https://tigerjk9.github.io/vibecoding-lecture/#video-part4) | **내 컴퓨터를 작업실로**<br>Antigravity IDE에서 만들고 Git으로 저장해 배포까지, MCP로 실시간 보드를 짓습니다. |
+
+영상 파일을 내려받으려면 [강의 자료 페이지](https://tigerjk9.github.io/vibecoding-lecture/#videos)의 각 영상 아래 '영상 내려받기'를 누르세요.
+
+---
+
 ## Part 4 산출물 웹앱 — 라이브 데모
 
 Part 4 실습에서 만드는 웹앱들의 **완성 모습을 설치 없이 브라우저에서 바로 체험**할 수 있습니다.
