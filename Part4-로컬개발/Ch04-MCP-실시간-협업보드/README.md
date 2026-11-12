@@ -1,5 +1,9 @@
 # Ch 4. MCP로 Supabase 실시간 협업 보드 만들기
 
+> 🎬 **이 장 영상**: [7편 「내 컴퓨터를 React 개발 서버로 만들기」 (4:10)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch7)<br>
+> 🎬 **이어서 보기**: [8편 「개발부터 배포까지, 내 손으로 완성하기」 (2:38)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch8)  
+> 소리 없이 자막으로 따라가는 장별 요약 영상입니다.
+
 > 🖥 **완성 모습이 궁금하다면?** → [체험판 데모 보기](https://lifeofpi-ux.github.io/vibecode-for-teacher/praise-board/)
 > (체험판은 Supabase 없이 동작합니다. 창을 2개 열면 실시간 반영을 체험할 수 있어요!)
 

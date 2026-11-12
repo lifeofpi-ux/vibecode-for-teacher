@@ -63,18 +63,22 @@
 
 ---
 
-## 영상으로 보기 — 파트마다 2분
+## 영상으로 보기: 장마다 한 편
 
-소리 없이 봐도 되도록 화면 문구만으로 만든 짧은 영상입니다. 책을 읽기 전에 흐름을 잡거나, 읽은 뒤 한 파트씩 정리할 때 보세요. 그림을 누르면 강의 자료 페이지에서 재생됩니다.
+책의 8개 장을 장마다 한 편씩, 소리 없이 화면 문구만으로 따라가는 영상으로 정리했습니다. 한 편에 1분 반에서 4분, 여덟 편을 모두 보면 21분입니다. 그 장을 읽기 전에 흐름을 잡거나, 읽은 뒤 정리할 때 보세요. 그림을 누르면 [디지털 웹 서적](https://lifeofpi-ux.github.io/vibecode-for-teacher/#videos)에서 재생됩니다.
 
 | 편 | 영상 | 내용 |
 |---|---|---|
-| 1편 · Part 1 (1:46) | [![1편 한숨 하나를 앱으로](https://tigerjk9.github.io/vibecoding-lecture/assets/video/vibe-ep1-poster.jpg)](https://tigerjk9.github.io/vibecoding-lecture/#video-part1) | **한숨 하나를 앱으로**<br>교실의 한숨 하나를 PRD 한 장으로 적고, HTML 파일 하나짜리 앱으로 엽니다. |
-| 2편 · Part 2 (1:32) | [![2편 앱에 지식을 더하다](https://tigerjk9.github.io/vibecoding-lecture/assets/video/vibe-ep2-poster.jpg)](https://tigerjk9.github.io/vibecoding-lecture/#video-part2) | **앱에 지식을 더하다**<br>고립된 섬 같은 앱에 급식 정보 같은 바깥 데이터와 AI를 붙입니다. |
-| 3편 · Part 3 (1:28) | [![3편 앱에 기억과 문지기를 달다](https://tigerjk9.github.io/vibecoding-lecture/assets/video/vibe-ep3-poster.jpg)](https://tigerjk9.github.io/vibecoding-lecture/#video-part3) | **앱에 기억과 문지기를 달다**<br>새로고침해도 남는 앱, 로그인한 사람만 여는 앱으로 바꿉니다. |
-| 4편 · Part 4 (1:44) | [![4편 내 컴퓨터를 작업실로](https://tigerjk9.github.io/vibecoding-lecture/assets/video/vibe-ep4-poster.jpg)](https://tigerjk9.github.io/vibecoding-lecture/#video-part4) | **내 컴퓨터를 작업실로**<br>Antigravity IDE에서 만들고 Git으로 저장해 배포까지, MCP로 실시간 보드를 짓습니다. |
+| 1편 · 1장 (1:38) | [![1편 모든 아이디어는 교실에서 시작된다](docs/videos/vibe-ch1-poster.jpg)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch1) | **모든 아이디어는 교실에서 시작된다**<br>서술형 답안지 200장의 막막함에서 출발해 좋은 문제의 조건, ADDIE, 현상과 이면을 거쳐 PRD 한 장으로 정리합니다.<br>[MP4 받기](docs/videos/vibe-ch1-720p.mp4) |
+| 2편 · 2장 (1:54) | [![2편 브라우저에서 동작하는 나의 첫 프로그램](docs/videos/vibe-ch2-poster.jpg)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch2) | **브라우저에서 동작하는 나의 첫 프로그램**<br>프롬프트 하나로 HTML 파일 하나짜리 출석 체크 앱을 열고, HTML·CSS·JavaScript와 로컬 스토리지가 각각 무슨 일을 하는지 봅니다.<br>[MP4 받기](docs/videos/vibe-ch2-720p.mp4) |
+| 3편 · 3장 (2:26) | [![3편 AI와 함께 만드는 첫 웹 서비스, Lovable](docs/videos/vibe-ch3-poster.jpg)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch3) | **AI와 함께 만드는 첫 웹 서비스, Lovable**<br>Lovable과 클라우드 DB로 글쓰기 타임라인 SNS를 만들어 주소로 배포하고, 식당 그림으로 프론트엔드·백엔드·API·DB를 나눠 봅니다.<br>[MP4 받기](docs/videos/vibe-ch3-720p.mp4) |
+| 4편 · 4장 (2:48) | [![4편 서비스는 혼자가 아니야, API 연동하기](docs/videos/vibe-ch4-poster.jpg)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch4) | **서비스는 혼자가 아니야, API 연동하기**<br>구글 AI Studio에서 앱을 리믹스하고, API와 JSON을 읽은 뒤 나이스 인증 키로 급식 조회 앱을 완성합니다.<br>[MP4 받기](docs/videos/vibe-ch4-720p.mp4) |
+| 5편 · 5장 (2:26) | [![5편 눈과 귀, 생각을 가진 AI 웹앱](docs/videos/vibe-ch5-poster.jpg)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch5) | **눈과 귀, 생각을 가진 AI 웹앱**<br>카메라로 사물을 알아보는 영어 학습 앱과 손글씨를 읽어 피드백하는 글쓰기 튜터를 만들고, 배포 전 키·요금·개인정보 유의점을 짚습니다.<br>[MP4 받기](docs/videos/vibe-ch5-720p.mp4) |
+| 6편 · 6장 (3:06) | [![6편 왜 데이터베이스가 필요할까요?](docs/videos/vibe-ch6-poster.jpg)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch6) | **왜 데이터베이스가 필요할까요?**<br>CRUD와 BaaS 비교에서 시작해 Supabase로 To-Do 앱을 만들고, RLS와 로그인으로 허용된 사람만 데이터를 보게 잠급니다.<br>[MP4 받기](docs/videos/vibe-ch6-720p.mp4) |
+| 7편 · 7장 (4:10) | [![7편 내 컴퓨터를 React 개발 서버로 만들기](docs/videos/vibe-ch7-poster.jpg)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch7) | **내 컴퓨터를 React 개발 서버로 만들기**<br>Antigravity IDE 설치부터 Node.js·Vite 개발 서버, 핫 리로드, MCP로 만드는 실시간 칭찬 보드, .env와 RLS까지 따라갑니다.<br>[MP4 받기](docs/videos/vibe-ch7-720p.mp4) |
+| 8편 · 8장 (2:38) | [![8편 개발부터 배포까지, 내 손으로 완성하기](docs/videos/vibe-ch8-poster.jpg)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch8) | **개발부터 배포까지, 내 손으로 완성하기**<br>GitHub Desktop으로 커밋·푸시·되돌리기를 익히고, Vercel에 연결해 푸시 한 번에 다시 배포되는 흐름을 봅니다.<br>[MP4 받기](docs/videos/vibe-ch8-720p.mp4) |
 
-영상 파일을 내려받으려면 [강의 자료 페이지](https://tigerjk9.github.io/vibecoding-lecture/#videos)의 각 영상 아래 '영상 내려받기'를 누르세요.
+영상 파일은 [`docs/videos/`](docs/videos/)에 있습니다. 각 실습 폴더의 README 맨 위에도 그 장의 영상을 걸어 두었습니다.
 
 ---
 

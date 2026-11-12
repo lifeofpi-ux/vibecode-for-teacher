@@ -1,5 +1,8 @@
 # Ch 3. Supabase를 활용한 To-Do 앱 만들기
 
+> 🎬 **이 장 영상**: [6편 「왜 데이터베이스가 필요할까요?」 (3:06)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch6)  
+> 소리 없이 자막으로 따라가는 장별 요약 영상입니다.
+
 구글 AI Studio의 채팅창에 아래 프롬프트를 입력합니다.
 `(여기에 본인 URL 입력)`, `(여기에 본인 Key 입력)` 부분은 Supabase 프로젝트에서 발급받은 본인의 값으로 바꿔주세요.
 

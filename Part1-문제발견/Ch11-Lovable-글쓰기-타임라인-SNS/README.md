@@ -1,5 +1,8 @@
 # Ch 11. Lovable을 이용한 서비스 개발 맛보기
 
+> 🎬 **이 장 영상**: [3편 「AI와 함께 만드는 첫 웹 서비스, Lovable」 (2:26)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch3)  
+> 소리 없이 자막으로 따라가는 장별 요약 영상입니다.
+
 러버블(Lovable) 채팅창에 아래 프롬프트를 입력합니다.
 
 ## "글쓰기 타임라인 SNS" 개발 프롬프트

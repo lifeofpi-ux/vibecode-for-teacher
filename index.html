@@ -303,6 +303,23 @@
     .demo-action-btn.secondary:hover {
       background: var(--bg-muted);
     }
+
+
+
+    /* 장별 영상 8편 (영상으로 보기 섹션과 장 머리의 영상 링크) <!-- vibe-videos --> */
+    .video-grid { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); margin-top: 1.25rem; }
+    .video-card { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-xs);
+                  overflow: hidden; scroll-margin-top: 5rem; display: flex; flex-direction: column; }
+    .video-card video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #000; }
+    .video-card-body { padding: 0.85rem 1rem 1rem; display: flex; flex-direction: column; gap: 0.35rem; flex: 1; }
+    .video-card-meta { font-size: 0.78rem; font-weight: 700; color: var(--brand-blue-dark); letter-spacing: 0.01em; }
+    .video-card h3 { font-size: 1rem; line-height: 1.45; margin: 0; color: var(--text-primary); word-break: keep-all; }
+    .video-card p { font-size: 0.88rem; line-height: 1.65; margin: 0; color: var(--text-secondary); word-break: keep-all; }
+    .video-card .video-dl { margin-top: auto; padding-top: 0.4rem; font-size: 0.82rem; font-weight: 600; color: var(--brand-blue-dark); }
+    .chapter-video-link { display: inline-flex; align-items: center; gap: 0.4rem; margin: 0.6rem 0.5rem 0 0; padding: 0.3rem 0.75rem;
+                          border-radius: 999px; background: var(--brand-blue-subtle); border: 1px solid var(--brand-blue-border);
+                          font-size: 0.84rem; font-weight: 600; color: var(--brand-blue-dark); text-decoration: none; }
+    .chapter-video-link:hover { background: var(--brand-blue-border); }
   </style>
 </head>
 
@@ -350,6 +367,7 @@
     </button>
     <a href="#intro-author" class="quick-chip active" data-target="intro-author">저자의 말</a>
     <a href="#prologue-p1" class="quick-chip" data-target="prologue-p1">프롤로그</a>
+    <a href="#videos" class="quick-chip" data-target="videos">🎬 영상 8편</a>
     <a href="#part1-ch04" class="quick-chip" data-target="part1-ch04">Part 1. 문제발견</a>
     <a href="#part2-ch03" class="quick-chip" data-target="part2-ch03">Part 2. AI Studio</a>
     <a href="#part3-ch03" class="quick-chip" data-target="part3-ch03">Part 3. Supabase</a>
@@ -399,6 +417,12 @@
       <a href="#prologue-p3" class="nav-item-link">
         <span class="nav-item-badge" style="background:#e0f2fe; color:#0369a1;">P-3</span>
         <span>이 책을 통해 만들게 될 것들</span>
+      </a>
+
+      <div class="nav-section-title">영상으로 보기</div><!-- vibe-videos -->
+      <a href="#videos" class="nav-item-link">
+        <span class="nav-item-badge" style="background:#fff4ed; color:#e04b00;">8편</span>
+        <span>장마다 한 편, 자막 영상</span>
       </a>
 
       <div class="nav-section-title">Part 1. 문제 발견</div>
@@ -536,6 +560,12 @@
       <a href="#prologue-p3" class="nav-item-link">
         <span class="nav-item-badge" style="background:#e0f2fe; color:#0369a1;">P-3</span>
         <span>이 책을 통해 만들게 될 것들</span>
+      </a>
+
+      <div class="nav-section-title">영상으로 보기</div><!-- vibe-videos -->
+      <a href="#videos" class="nav-item-link">
+        <span class="nav-item-badge" style="background:#fff4ed; color:#e04b00;">8편</span>
+        <span>장마다 한 편, 자막 영상</span>
       </a>
 
       <div class="nav-section-title">Part 1. 문제 발견</div>
@@ -829,6 +859,118 @@
         </div>
       </section>
 
+      <!-- vibe-videos -->
+      <!-- ====================================================================
+           영상으로 보기 — 장마다 한 편, 자막으로 따라가는 영상 8편
+           ==================================================================== -->
+      <section id="videos" class="chapter-section searchable-chapter">
+        <div class="chapter-section-header">
+          <div class="chapter-meta-row">
+            <span class="chapter-badge">영상으로 보기</span>
+            <span class="chapter-badge orange">8편 · 21분</span>
+            <span class="read-time-badge">소리 없이 자막만으로 봅니다</span>
+          </div>
+          <h2 style="border: none; padding: 0; margin: 0.4rem 0;">
+            장마다 한 편, 자막으로 따라가는 영상
+          </h2>
+          <p style="color: var(--text-muted); margin: 0; font-size: 0.94rem;">
+            책의 8개 장을 한 편에 1분 반에서 4분으로 정리했습니다. 그 장을 읽기 전에 흐름을 잡거나, 읽은 뒤 정리할 때 보세요.
+            재생 버튼을 눌러야 영상을 받기 시작합니다.
+          </p>
+        </div>
+        <div class="video-grid">
+          <article class="video-card" id="video-ch1">
+            <video controls preload="none" playsinline poster="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch1-poster.jpg" width="1280" height="720" aria-label="1편 모든 아이디어는 교실에서 시작된다">
+              <source src="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch1-720p.mp4" type="video/mp4">
+            </video>
+            <div class="video-card-body">
+              <span class="video-card-meta">1편 · 1장 · 1:38</span>
+              <h3>모든 아이디어는 교실에서 시작된다</h3>
+              <p>서술형 답안지 200장의 막막함에서 출발해 좋은 문제의 조건, ADDIE, 현상과 이면을 거쳐 PRD 한 장으로 정리합니다.</p>
+              <a class="video-dl" href="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch1-720p.mp4" download>영상 내려받기 (MP4)</a>
+            </div>
+          </article>
+          <article class="video-card" id="video-ch2">
+            <video controls preload="none" playsinline poster="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch2-poster.jpg" width="1280" height="720" aria-label="2편 브라우저에서 동작하는 나의 첫 프로그램">
+              <source src="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch2-720p.mp4" type="video/mp4">
+            </video>
+            <div class="video-card-body">
+              <span class="video-card-meta">2편 · 2장 · 1:54</span>
+              <h3>브라우저에서 동작하는 나의 첫 프로그램</h3>
+              <p>프롬프트 하나로 HTML 파일 하나짜리 출석 체크 앱을 열고, HTML·CSS·JavaScript와 로컬 스토리지가 각각 무슨 일을 하는지 봅니다.</p>
+              <a class="video-dl" href="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch2-720p.mp4" download>영상 내려받기 (MP4)</a>
+            </div>
+          </article>
+          <article class="video-card" id="video-ch3">
+            <video controls preload="none" playsinline poster="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch3-poster.jpg" width="1280" height="720" aria-label="3편 AI와 함께 만드는 첫 웹 서비스, Lovable">
+              <source src="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch3-720p.mp4" type="video/mp4">
+            </video>
+            <div class="video-card-body">
+              <span class="video-card-meta">3편 · 3장 · 2:26</span>
+              <h3>AI와 함께 만드는 첫 웹 서비스, Lovable</h3>
+              <p>Lovable과 클라우드 DB로 글쓰기 타임라인 SNS를 만들어 주소로 배포하고, 식당 그림으로 프론트엔드·백엔드·API·DB를 나눠 봅니다.</p>
+              <a class="video-dl" href="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch3-720p.mp4" download>영상 내려받기 (MP4)</a>
+            </div>
+          </article>
+          <article class="video-card" id="video-ch4">
+            <video controls preload="none" playsinline poster="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch4-poster.jpg" width="1280" height="720" aria-label="4편 서비스는 혼자가 아니야, API 연동하기">
+              <source src="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch4-720p.mp4" type="video/mp4">
+            </video>
+            <div class="video-card-body">
+              <span class="video-card-meta">4편 · 4장 · 2:48</span>
+              <h3>서비스는 혼자가 아니야, API 연동하기</h3>
+              <p>구글 AI Studio에서 앱을 리믹스하고, API와 JSON을 읽은 뒤 나이스 인증 키로 급식 조회 앱을 완성합니다.</p>
+              <a class="video-dl" href="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch4-720p.mp4" download>영상 내려받기 (MP4)</a>
+            </div>
+          </article>
+          <article class="video-card" id="video-ch5">
+            <video controls preload="none" playsinline poster="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch5-poster.jpg" width="1280" height="720" aria-label="5편 눈과 귀, 생각을 가진 AI 웹앱">
+              <source src="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch5-720p.mp4" type="video/mp4">
+            </video>
+            <div class="video-card-body">
+              <span class="video-card-meta">5편 · 5장 · 2:26</span>
+              <h3>눈과 귀, 생각을 가진 AI 웹앱</h3>
+              <p>카메라로 사물을 알아보는 영어 학습 앱과 손글씨를 읽어 피드백하는 글쓰기 튜터를 만들고, 배포 전 키·요금·개인정보 유의점을 짚습니다.</p>
+              <a class="video-dl" href="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch5-720p.mp4" download>영상 내려받기 (MP4)</a>
+            </div>
+          </article>
+          <article class="video-card" id="video-ch6">
+            <video controls preload="none" playsinline poster="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch6-poster.jpg" width="1280" height="720" aria-label="6편 왜 데이터베이스가 필요할까요?">
+              <source src="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch6-720p.mp4" type="video/mp4">
+            </video>
+            <div class="video-card-body">
+              <span class="video-card-meta">6편 · 6장 · 3:06</span>
+              <h3>왜 데이터베이스가 필요할까요?</h3>
+              <p>CRUD와 BaaS 비교에서 시작해 Supabase로 To-Do 앱을 만들고, RLS와 로그인으로 허용된 사람만 데이터를 보게 잠급니다.</p>
+              <a class="video-dl" href="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch6-720p.mp4" download>영상 내려받기 (MP4)</a>
+            </div>
+          </article>
+          <article class="video-card" id="video-ch7">
+            <video controls preload="none" playsinline poster="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch7-poster.jpg" width="1280" height="720" aria-label="7편 내 컴퓨터를 React 개발 서버로 만들기">
+              <source src="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch7-720p.mp4" type="video/mp4">
+            </video>
+            <div class="video-card-body">
+              <span class="video-card-meta">7편 · 7장 · 4:10</span>
+              <h3>내 컴퓨터를 React 개발 서버로 만들기</h3>
+              <p>Antigravity IDE 설치부터 Node.js·Vite 개발 서버, 핫 리로드, MCP로 만드는 실시간 칭찬 보드, .env와 RLS까지 따라갑니다.</p>
+              <a class="video-dl" href="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch7-720p.mp4" download>영상 내려받기 (MP4)</a>
+            </div>
+          </article>
+          <article class="video-card" id="video-ch8">
+            <video controls preload="none" playsinline poster="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch8-poster.jpg" width="1280" height="720" aria-label="8편 개발부터 배포까지, 내 손으로 완성하기">
+              <source src="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch8-720p.mp4" type="video/mp4">
+            </video>
+            <div class="video-card-body">
+              <span class="video-card-meta">8편 · 8장 · 2:38</span>
+              <h3>개발부터 배포까지, 내 손으로 완성하기</h3>
+              <p>GitHub Desktop으로 커밋·푸시·되돌리기를 익히고, Vercel에 연결해 푸시 한 번에 다시 배포되는 흐름을 봅니다.</p>
+              <a class="video-dl" href="https://lifeofpi-ux.github.io/vibecode-for-teacher/videos/vibe-ch8-720p.mp4" download>영상 내려받기 (MP4)</a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- vibe-videos -->
+
       <!-- ====================================================================
            PART 1. 문제 발견 — 내 불편함이 앱이 되기까지
            ==================================================================== -->
@@ -846,6 +988,7 @@
           <p style="color: var(--text-muted); margin: 0; font-size: 0.94rem;">
             PRD가 완성되면 AI에게 PRD 전체를 복사해 붙여넣으며 대화를 시작합니다.
           </p>
+          <div class="chapter-video-links"><!-- vibe-videos --><a class="chapter-video-link" href="#video-ch1">▶ 이 장 영상 · 1편 「모든 아이디어는 교실에서 시작된다」 1:38</a></div>
         </div>
 
         <p><strong>시작 대화 프롬프트:</strong> <em>"안녕, 나는 이런 PRD를 가지고 앱을 만들려고 해. 먼저 첫 번째 기능을 구현해 줄래?"</em></p>
@@ -925,6 +1068,7 @@
           <p style="color: var(--text-muted); margin: 0; font-size: 0.94rem;">
             HTML 파일 하나만으로 동작하는 스마트 출석체크 웹앱 제작 프롬프트입니다.
           </p>
+          <div class="chapter-video-links"><!-- vibe-videos --><a class="chapter-video-link" href="#video-ch2">▶ 이 장 영상 · 2편 「브라우저에서 동작하는 나의 첫 프로그램」 1:54</a></div>
         </div>
 
         <div class="code-wrapper">
@@ -968,6 +1112,7 @@
           <p style="color: var(--text-muted); margin: 0; font-size: 0.94rem;">
             Lovable의 클라우드 기능 및 Supabase 연동으로 완성하는 '글쓰기 타임라인 SNS' 프롬프트입니다.
           </p>
+          <div class="chapter-video-links"><!-- vibe-videos --><a class="chapter-video-link" href="#video-ch3">▶ 이 장 영상 · 3편 「AI와 함께 만드는 첫 웹 서비스, Lovable」 2:26</a></div>
         </div>
 
         <div class="code-wrapper">
@@ -1022,6 +1167,7 @@
           <p style="color: var(--text-muted); margin: 0; font-size: 0.94rem;">
             나이스(NEIS) 교육정보 개방포털 API를 연동하여 학교별 급식을 조회하는 프롬프트 모음입니다.
           </p>
+          <div class="chapter-video-links"><!-- vibe-videos --><a class="chapter-video-link" href="#video-ch4">▶ 이 장 영상 · 4편 「서비스는 혼자가 아니야, API 연동하기」 2:48</a></div>
         </div>
 
         <h3>1. 급식 조회 앱 기본 제작 프롬프트</h3>
@@ -1122,6 +1268,7 @@
           <p style="color: var(--text-muted); margin: 0; font-size: 0.94rem;">
             Gemini 2.5 Flash 모델의 Vision 및 음성 TTS 기능을 결합한 사물 인식 영어 학습 앱입니다.
           </p>
+          <div class="chapter-video-links"><!-- vibe-videos --><a class="chapter-video-link" href="#video-ch5">▶ 이 장 영상 · 5편 「눈과 귀, 생각을 가진 AI 웹앱」 2:26</a></div>
         </div>
 
         <h3>1. PRD를 활용한 제작 프롬프트</h3>
@@ -1231,6 +1378,7 @@
           <p style="color: var(--text-muted); margin: 0; font-size: 0.94rem;">
             AI 페르소나 설정, 공책 사진 OCR 기능, 그리고 메타 프롬프팅으로 고도화된 프롬프트 모음입니다.
           </p>
+          <div class="chapter-video-links"><!-- vibe-videos --><a class="chapter-video-link" href="#video-ch5">▶ 이 장 영상 · 5편 「눈과 귀, 생각을 가진 AI 웹앱」 2:26</a></div>
         </div>
 
         <h3>1. 기본 골격 프롬프트</h3>
@@ -1334,6 +1482,7 @@
           <p style="color: var(--text-muted); margin: 0; font-size: 0.94rem;">
             클라우드 데이터베이스에 날짜별 할 일을 영구 저장하고 관리하는 풀스택 프롬프트입니다.
           </p>
+          <div class="chapter-video-links"><!-- vibe-videos --><a class="chapter-video-link" href="#video-ch6">▶ 이 장 영상 · 6편 「왜 데이터베이스가 필요할까요?」 3:06</a></div>
         </div>
 
         <div class="code-wrapper">
@@ -1391,6 +1540,7 @@ Supabase에 관련 데이터베이스 관련 테이블을 생성하고 연동할
           <p style="color: var(--text-muted); margin: 0; font-size: 0.94rem;">
             Supabase Auth 기능을 연결해 로그인한 사용자만 일정 앱을 이용할 수 있도록 보안을 강화합니다.
           </p>
+          <div class="chapter-video-links"><!-- vibe-videos --><a class="chapter-video-link" href="#video-ch6">▶ 이 장 영상 · 6편 「왜 데이터베이스가 필요할까요?」 3:06</a></div>
         </div>
 
         <div class="code-wrapper">
@@ -1434,6 +1584,7 @@ Supabase에 관련 데이터베이스 관련 테이블을 생성하고 연동할
           <p style="color: var(--text-muted); margin: 0; font-size: 0.94rem;">
             에이전트 패널에서 첫 명령어로 연한 파란색 배경의 자기소개 페이지를 완성합니다.
           </p>
+          <div class="chapter-video-links"><!-- vibe-videos --><a class="chapter-video-link" href="#video-ch7">▶ 이 장 영상 · 7편 「내 컴퓨터를 React 개발 서버로 만들기」 4:10</a></div>
         </div>
 
         <!-- Live Demo Card -->
@@ -1483,6 +1634,7 @@ Supabase에 관련 데이터베이스 관련 테이블을 생성하고 연동할
           <p style="color: var(--text-muted); margin: 0; font-size: 0.94rem;">
             React + Vite + Supabase Realtime을 결합해 실시간으로 동기화되는 인터랙티브 보드입니다.
           </p>
+          <div class="chapter-video-links"><!-- vibe-videos --><a class="chapter-video-link" href="#video-ch7">▶ 이 장 영상 · 7편 「내 컴퓨터를 React 개발 서버로 만들기」 4:10</a><a class="chapter-video-link" href="#video-ch8">▶ 이어서 보기 · 8편 「개발부터 배포까지, 내 손으로 완성하기」 2:38</a></div>
         </div>
 
         <!-- Live Demo Card -->

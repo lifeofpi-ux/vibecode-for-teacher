@@ -1,5 +1,8 @@
 # Ch 3. Open API를 활용한 급식 조회 앱 만들기
 
+> 🎬 **이 장 영상**: [4편 「서비스는 혼자가 아니야, API 연동하기」 (2:48)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch4)  
+> 소리 없이 자막으로 따라가는 장별 요약 영상입니다.
+
 구글 AI Studio의 Build 입력창에 아래 프롬프트를 순서대로 활용합니다.
 
 ## 1. 급식 조회 앱 제작 프롬프트

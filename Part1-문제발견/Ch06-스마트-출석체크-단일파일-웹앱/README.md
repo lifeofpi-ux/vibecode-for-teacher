@@ -1,5 +1,8 @@
 # Ch 6. LLM으로 만들어보는 단일 파일 웹앱 (출석 체크 프로그램)
 
+> 🎬 **이 장 영상**: [2편 「브라우저에서 동작하는 나의 첫 프로그램」 (1:54)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch2)  
+> 소리 없이 자막으로 따라가는 장별 요약 영상입니다.
+
 LLM(ChatGPT, Gemini, Claude 등) 채팅창에 아래 프롬프트를 입력합니다.
 
 ## 스마트 출석 체크 웹앱 제작 프롬프트

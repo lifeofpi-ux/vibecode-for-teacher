@@ -1,5 +1,8 @@
 # Ch 8. 학생 글쓰기 AI 피드백 시스템 구축하기
 
+> 🎬 **이 장 영상**: [5편 「눈과 귀, 생각을 가진 AI 웹앱」 (2:26)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch5)  
+> 소리 없이 자막으로 따라가는 장별 요약 영상입니다.
+
 ## 1. 'AI 글쓰기 튜터' 기본 골격 프롬프트
 
 구글 AI Studio의 Builder 입력창에 입력합니다.

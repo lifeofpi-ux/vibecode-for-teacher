@@ -1,5 +1,8 @@
 # Ch 1. Antigravity IDE 시작하기
 
+> 🎬 **이 장 영상**: [7편 「내 컴퓨터를 React 개발 서버로 만들기」 (4:10)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch7)  
+> 소리 없이 자막으로 따라가는 장별 요약 영상입니다.
+
 > 🖥 **완성 모습이 궁금하다면?** → [라이브 데모 보기](https://lifeofpi-ux.github.io/vibecode-for-teacher/profile/)
 
 Antigravity IDE 우측 에이전트 패널(Ctrl+L, macOS는 Cmd+L)의 입력창에 아래 내용을 붙여넣습니다.

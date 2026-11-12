@@ -1,5 +1,8 @@
 # Ch 4. 허용된 사용자만 접근 가능한 앱으로 변경하기
 
+> 🎬 **이 장 영상**: [6편 「왜 데이터베이스가 필요할까요?」 (3:06)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch6)  
+> 소리 없이 자막으로 따라가는 장별 요약 영상입니다.
+
 앞 챕터에서 사용했던 AI Studio의 To-Do 프로젝트 프롬프트 창을 다시 열어 입력합니다.
 
 ## Supabase Auth 인증 기능 추가 프롬프트

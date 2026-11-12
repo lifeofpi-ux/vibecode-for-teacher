@@ -1,5 +1,8 @@
 # Ch 7. 실시간 사물 인식 AI 영어 학습 앱 제작하기
 
+> 🎬 **이 장 영상**: [5편 「눈과 귀, 생각을 가진 AI 웹앱」 (2:26)](https://lifeofpi-ux.github.io/vibecode-for-teacher/#video-ch5)  
+> 소리 없이 자막으로 따라가는 장별 요약 영상입니다.
+
 구글 AI Studio의 Builder 입력창에 아래 프롬프트를 붙여넣고 Build 버튼을 누릅니다.
 
 ## 1. PRD를 활용한 제작 프롬프트
